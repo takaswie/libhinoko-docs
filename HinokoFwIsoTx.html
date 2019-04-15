@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HinokoFwIsoTx: Hinoko Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Hinoko Reference Manual">
+<link rel="up" href="hinoko-fw-iso.html" title="Hinoko objects for isochronous context of 1394 OHCI.">
+<link rel="prev" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple">
+<link rel="next" href="index-all.html" title="Index of all symbols">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoTx.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoTx.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoTx.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="hinoko-fw-iso.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="HinokoFwIsoRxMultiple.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="index-all.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="HinokoFwIsoTx"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="HinokoFwIsoTx.top_of_page"></a>HinokoFwIsoTx</span></h2>
+<p>HinokoFwIsoTx — An object to transmit isochronous packet for single
+	       channel.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="returnvalue">HinokoFwIsoTx</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-new" title="hinoko_fw_iso_tx_new ()">hinoko_fw_iso_tx_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-allocate" title="hinoko_fw_iso_tx_allocate ()">hinoko_fw_iso_tx_allocate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-release" title="hinoko_fw_iso_tx_release ()">hinoko_fw_iso_tx_release</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-map-buffer" title="hinoko_fw_iso_tx_map_buffer ()">hinoko_fw_iso_tx_map_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-unmap-buffer" title="hinoko_fw_iso_tx_unmap_buffer ()">hinoko_fw_iso_tx_unmap_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-start" title="hinoko_fw_iso_tx_start ()">hinoko_fw_iso_tx_start</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-stop" title="hinoko_fw_iso_tx_stop ()">hinoko_fw_iso_tx_stop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoTx.html#hinoko-fw-iso-tx-register-packet" title="hinoko_fw_iso_tx_register_packet ()">hinoko_fw_iso_tx_register_packet</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="HinokoFwIsoTx.html#HinokoFwIsoTx-interrupted" title="The “interrupted” signal">interrupted</a></td>
+<td class="signal_flags">Run Last</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx">HinokoFwIsoCtx</a>
+        <span class="lineart">╰──</span> HinokoFwIsoTx
+</pre>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.description"></a><h2>Description</h2>
+<p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> transmits isochronous packets for single channel by IT
+context in 1394 OHCI. The content of packet is split to two parts; context
+header and context payload in a manner of Linux FireWire subsystem.</p>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-new"></a><h3>hinoko_fw_iso_tx_new ()</h3>
+<pre class="programlisting"><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="returnvalue">HinokoFwIsoTx</span></a> *
+hinoko_fw_iso_tx_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Instantiate <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> object and return the instance.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-new.returns"></a><h4>Returns</h4>
+<p> an instance of <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-allocate"></a><h3>hinoko_fw_iso_tx_allocate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_allocate (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
+                           <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
+                           <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwScode" title="enum HinokoFwScode"><span class="type">HinokoFwScode</span></a> scode</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> channel</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> header_size</code></em>,
+                           <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Allocate an IT context to 1394 OHCI controller. A local node of the node
+corresponding to the given path is used as the controller, thus any path is
+accepted as long as process has enough permission for the path.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-allocate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>A path to any Linux FireWire character device.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scode</p></td>
+<td class="parameter_description"><p>A <a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwScode" title="enum HinokoFwScode"><span class="type">HinokoFwScode</span></a> to indicate speed of isochronous communication.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>channel</p></td>
+<td class="parameter_description"><p>An isochronous channel to transfer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>header_size</p></td>
+<td class="parameter_description"><p>The number of bytes for header of IT context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-release"></a><h3>hinoko_fw_iso_tx_release ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_release (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>);</pre>
+<p>Release allocated IT context from 1394 OHCI controller.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-release.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-map-buffer"></a><h3>hinoko_fw_iso_tx_map_buffer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_map_buffer (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
+                             <em class="parameter"><code><span class="type">guint</span> maximum_bytes_per_payload</code></em>,
+                             <em class="parameter"><code><span class="type">guint</span> payloads_per_buffer</code></em>,
+                             <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Map intermediate buffer to share payload of IT context with 1394 OHCI
+controller.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-map-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>maximum_bytes_per_payload</p></td>
+<td class="parameter_description"><p>The number of bytes for payload of IT context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>payloads_per_buffer</p></td>
+<td class="parameter_description"><p>The number of payloads of IT context in buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-unmap-buffer"></a><h3>hinoko_fw_iso_tx_unmap_buffer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_unmap_buffer (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>);</pre>
+<p>Unmap intermediate buffer shard with 1394 OHCI controller for payload
+of IT context.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-unmap-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-start"></a><h3>hinoko_fw_iso_tx_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_start (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
+                        <em class="parameter"><code>const <span class="type">guint16</span> *cycle_match</code></em>,
+                        <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Start IT context.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-start.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cycle_match</p></td>
+<td class="parameter_description"><p>The isochronous cycle to start packet processing. The first
+element should be the second part of isochronous cycle, up to
+3. The second element should be the cycle part of isochronous
+cycle, up to 7999. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint16][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-stop"></a><h3>hinoko_fw_iso_tx_stop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_stop (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>);</pre>
+<p>Stop IT context.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-stop.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-tx-register-packet"></a><h3>hinoko_fw_iso_tx_register_packet ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_tx_register_packet (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMatchFlag" title="enum HinokoFwIsoCtxMatchFlag"><span class="type">HinokoFwIsoCtxMatchFlag</span></a> tags</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> sy</code></em>,
+                                  <em class="parameter"><code>const <span class="type">guint8</span> *header</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> header_length</code></em>,
+                                  <em class="parameter"><code>const <span class="type">guint8</span> *payload</code></em>,
+                                  <em class="parameter"><code><span class="type">guint</span> payload_length</code></em>,
+                                  <em class="parameter"><code><span class="type">gboolean</span> interrupt</code></em>,
+                                  <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Register packet data in a shape of header and payload of IT context.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-tx-register-packet.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tags</p></td>
+<td class="parameter_description"><p>The value of tag field for isochronous packet to register.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sy</p></td>
+<td class="parameter_description"><p>The value of sy field for isochronous packet to register.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>header</p></td>
+<td class="parameter_description"><p>The header of IT context for isochronous packet. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=header_length][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>header_length</p></td>
+<td class="parameter_description"><p>The number of bytes for the <em class="parameter"><code>header</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>payload</p></td>
+<td class="parameter_description"><p>The payload of IT context for isochronous packet. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=payload_length][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>payload_length</p></td>
+<td class="parameter_description"><p>The number of bytes for the <em class="parameter"><code>payload</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interrupt</p></td>
+<td class="parameter_description"><p>Whether to generate event notification after processing the packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoTx.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="HinokoFwIsoTx-interrupted"></a><h3>The <code class="literal">“interrupted”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self,
+               <span class="type">guint</span>          sec,
+               <span class="type">guint</span>          cycle,
+               <span class="type">gpointer</span>       tstamp,
+               <span class="type">guint</span>          tstamp_length,
+               <span class="type">guint</span>          count,
+               <span class="type">gpointer</span>       user_data)</pre>
+<p>When registered packets are handled, <a class="link" href="HinokoFwIsoTx.html#HinokoFwIsoTx-interrupted" title="The “interrupted” signal"><span class="type">“interrupted”</span></a>
+signal is emitted with timestamps of the packet.</p>
+<div class="refsect3">
+<a name="HinokoFwIsoTx-interrupted.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sec</p></td>
+<td class="parameter_description"><p>sec part of isochronous cycle when interrupt occurs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cycle</p></td>
+<td class="parameter_description"><p>cycle part of of isochronous cycle when interrupt occurs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tstamp</p></td>
+<td class="parameter_description"><p>A series
+of timestamps for packets already handled. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=tstamp_length][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tstamp_length</p></td>
+<td class="parameter_description"><p>the number of bytes for <em class="parameter"><code>tstamp</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>the number of handled packets.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HinokoFwIsoCtx: Hinoko Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Hinoko Reference Manual">
+<link rel="up" href="hinoko-fw-iso.html" title="Hinoko objects for isochronous context of 1394 OHCI.">
+<link rel="prev" href="hinoko-fw-iso.html" title="Hinoko objects for isochronous context of 1394 OHCI.">
+<link rel="next" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoCtx.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoCtx.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoCtx.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="hinoko-fw-iso.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="hinoko-fw-iso.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="HinokoFwIsoRxSingle.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="HinokoFwIsoCtx"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="HinokoFwIsoCtx.top_of_page"></a>HinokoFwIsoCtx</span></h2>
+<p>HinokoFwIsoCtx — An abstract object to maintain isochronous context.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-get-cycle-timer" title="hinoko_fw_iso_ctx_get_cycle_timer ()">hinoko_fw_iso_ctx_get_cycle_timer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-create-source" title="hinoko_fw_iso_ctx_create_source ()">hinoko_fw_iso_ctx_create_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="HinokoFwIsoCtx.html#HinokoFwIsoCtx--bytes-per-chunk" title="The “bytes-per-chunk” property">bytes-per-chunk</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="HinokoFwIsoCtx.html#HinokoFwIsoCtx--chunks-per-buffer" title="The “chunks-per-buffer” property">chunks-per-buffer</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="HinokoFwIsoCtx.html#HinokoFwIsoCtx--registered-chunk-count" title="The “registered-chunk-count” property">registered-chunk-count</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> HinokoFwIsoCtx
+        <span class="lineart">├──</span> <a class="link" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple">HinokoFwIsoRxMultiple</a>
+        <span class="lineart">├──</span> <a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle">HinokoFwIsoRxSingle</a>
+        <span class="lineart">╰──</span> <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx">HinokoFwIsoTx</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.description"></a><h2>Description</h2>
+<p>A <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a> is an abstract object to maintain isochronous context by
+UAPI of Linux FireWire subsystem. All of operations utilize ioctl(2) with
+subsystem specific request commands. This object is designed for internal
+use, therefore a few method and properties are available for applications.</p>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinoko-fw-iso-ctx-get-cycle-timer"></a><h3>hinoko_fw_iso_ctx_get_cycle_timer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_ctx_get_cycle_timer (<em class="parameter"><code><a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a> *self</code></em>,
+                                   <em class="parameter"><code><span class="type">guint16</span> *cycle_timer</code></em>,
+                                   <em class="parameter"><code><span class="type">GTimeVal</span> *tv</code></em>,
+                                   <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Retrieve the value of cycle timer register. When <em class="parameter"><code>tv</code></em>
+ argument is given,
+it's filled for the nearest system time with CLOCK_MONOTONIC_RAW flag. This
+method call is available once any isochronous context is created.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-ctx-get-cycle-timer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cycle_timer</p></td>
+<td class="parameter_description"><p>The value of cycle timer register of
+1394 OHCI, including three elements; second, cycle and offset. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=3][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint16][<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tv</p></td>
+<td class="parameter_description"><p>Fill with the nearest system time with CLOCK_MONOTONIC_RAW. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinoko-fw-iso-ctx-create-source"></a><h3>hinoko_fw_iso_ctx_create_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinoko_fw_iso_ctx_create_source (<em class="parameter"><code><a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a> *self</code></em>,
+                                 <em class="parameter"><code><span class="type">GSource</span> **src</code></em>,
+                                 <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Create Gsource for GMainContext to dispatch events for isochronous context.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-ctx-create-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <span class="type">hinokoFwIsoCtx</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>src</p></td>
+<td class="parameter_description"><p>A <span class="type">GSource</span>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="HinokoFwIsoCtx--bytes-per-chunk"></a><h3>The <code class="literal">“bytes-per-chunk”</code> property</h3>
+<pre class="programlisting">  “bytes-per-chunk”          <span class="type">guint</span></pre>
+<p>The number of bytes for chunk in buffer.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinokoFwIsoCtx--chunks-per-buffer"></a><h3>The <code class="literal">“chunks-per-buffer”</code> property</h3>
+<pre class="programlisting">  “chunks-per-buffer”        <span class="type">guint</span></pre>
+<p>The number of chunks in buffer.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinokoFwIsoCtx--registered-chunk-count"></a><h3>The <code class="literal">“registered-chunk-count”</code> property</h3>
+<pre class="programlisting">  “registered-chunk-count”   <span class="type">guint</span></pre>
+<p>The number of chunk to be registered.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>
