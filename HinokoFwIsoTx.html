@@ -299,6 +299,7 @@ of IT context.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_tx_start (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
                         <em class="parameter"><code>const <span class="type">guint16</span> *cycle_match</code></em>,
+                        <em class="parameter"><code><span class="type">guint</span> packets_per_irq</code></em>,
                         <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
 <p>Start IT context.</p>
 <div class="refsect3">
@@ -322,6 +323,13 @@ element should be the second part of isochronous cycle, up to
 3. The second element should be the cycle part of isochronous
 cycle, up to 7999. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint16][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>packets_per_irq</p></td>
+<td class="parameter_description"><p>The number of packets as interval of event. This value
+should be up to (pagesize / 4) due to implementation of
+Linux FireWire subsystem.</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
@@ -365,7 +373,6 @@ hinoko_fw_iso_tx_register_packet (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code><span class="type">guint</span> header_length</code></em>,
                                   <em class="parameter"><code>const <span class="type">guint8</span> *payload</code></em>,
                                   <em class="parameter"><code><span class="type">guint</span> payload_length</code></em>,
-                                  <em class="parameter"><code><span class="type">gboolean</span> interrupt</code></em>,
                                   <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
 <p>Register packet data in a shape of header and payload of IT context.</p>
 <div class="refsect3">
@@ -412,11 +419,6 @@ hinoko_fw_iso_tx_register_packet (<em class="parameter"><code><a class="link" hr
 <td class="parameter_name"><p>payload_length</p></td>
 <td class="parameter_description"><p>The number of bytes for the <em class="parameter"><code>payload</code></em>
 .</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>interrupt</p></td>
-<td class="parameter_description"><p>Whether to generate event notification after processing the packet.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>

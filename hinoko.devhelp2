@@ -23,6 +23,7 @@
     <keyword type="property" name="The “bytes-per-chunk” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--bytes-per-chunk"/>
     <keyword type="property" name="The “chunks-per-buffer” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--chunks-per-buffer"/>
     <keyword type="property" name="The “registered-chunk-count” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--registered-chunk-count"/>
+    <keyword type="signal" name="The “stopped” signal" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx-stopped"/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_new ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-new"/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_allocate ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-allocate"/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_release ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-release"/>
@@ -60,7 +61,6 @@
     <keyword type="constant" name="HINOKO_FW_SCODE_S800" link="hinoko-hinoko-enum-types.html#HINOKO-FW-SCODE-S800:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_SCODE_S1600" link="hinoko-hinoko-enum-types.html#HINOKO-FW-SCODE-S1600:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_SCODE_S3200" link="hinoko-hinoko-enum-types.html#HINOKO-FW-SCODE-S3200:CAPS"/>
-    <keyword type="constant" name="HINOKO_FW_SCODE_BETA" link="hinoko-hinoko-enum-types.html#HINOKO-FW-SCODE-BETA:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG0" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG0:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG1" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG1:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG2" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG2:CAPS"/>

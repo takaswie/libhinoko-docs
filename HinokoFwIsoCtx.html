@@ -17,7 +17,8 @@
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#HinokoFwIsoCtx.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#HinokoFwIsoCtx.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#HinokoFwIsoCtx.properties" class="shortcut">Properties</a></span>
+                  <a href="#HinokoFwIsoCtx.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#HinokoFwIsoCtx.signals" class="shortcut">Signals</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="hinoko-fw-iso.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -88,6 +89,21 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="HinokoFwIsoCtx.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="HinokoFwIsoCtx.html#HinokoFwIsoCtx-stopped" title="The “stopped” signal">stopped</a></td>
+<td class="signal_flags">Run Last</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="HinokoFwIsoCtx.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    GObject
     <span class="lineart">╰──</span> HinokoFwIsoCtx
@@ -155,7 +171,7 @@ method call is available once any isochronous context is created.</p>
 <a name="hinoko-fw-iso-ctx-create-source"></a><h3>hinoko_fw_iso_ctx_create_source ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_ctx_create_source (<em class="parameter"><code><a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a> *self</code></em>,
-                                 <em class="parameter"><code><span class="type">GSource</span> **src</code></em>,
+                                 <em class="parameter"><code><span class="type">GSource</span> **gsrc</code></em>,
                                  <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
 <p>Create Gsource for GMainContext to dispatch events for isochronous context.</p>
 <div class="refsect3">
@@ -173,7 +189,7 @@ hinoko_fw_iso_ctx_create_source (<em class="parameter"><code><a class="link" hre
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>src</p></td>
+<td class="parameter_name"><p>gsrc</p></td>
 <td class="parameter_description"><p>A <span class="type">GSource</span>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
@@ -214,6 +230,46 @@ hinoko_fw_iso_ctx_create_source (<em class="parameter"><code><a class="link" hre
 <p>The number of chunk to be registered.</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="HinokoFwIsoCtx-stopped"></a><h3>The <code class="literal">“stopped”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a> *self,
+               <span class="type">GError</span>         *error,
+               <span class="type">gpointer</span>        user_data)</pre>
+<p>When isochronous context is stopped, <a class="link" href="HinokoFwIsoCtx.html#HinokoFwIsoCtx-stopped" title="The “stopped” signal"><span class="type">“stopped”</span></a> is
+emitted.</p>
+<div class="refsect3">
+<a name="HinokoFwIsoCtx-stopped.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
 </div>
 </div>
 </div>
