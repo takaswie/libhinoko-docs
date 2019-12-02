@@ -52,6 +52,10 @@
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMatchFlag" title="enum HinokoFwIsoCtxMatchFlag">HinokoFwIsoCtxMatchFlag</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinoko-hinoko-enum-types.html#HinokoSystemClockId" title="enum HinokoSystemClockId">HinokoSystemClockId</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -59,7 +63,8 @@
 <a name="hinoko-hinoko-enum-types.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> HinokoFwIsoCtxMode
-    <span class="lineart">╰──</span> HinokoFwScode
+    <span class="lineart">├──</span> HinokoFwScode
+    <span class="lineart">╰──</span> HinokoSystemClockId
     <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
     <span class="lineart">╰──</span> HinokoFwIsoCtxMatchFlag
 </pre>
@@ -209,6 +214,45 @@
 <td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG3:CAPS"></a>HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG3</p></td>
 <td class="enum_member_description">
 <p>The value of tag3 in 1394 OHCI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinokoSystemClockId"></a><h3>enum HinokoSystemClockId</h3>
+<p>A set of enumerations for ID of system reference clock. In detail, please
+refer to manual of clock_gettime(2).</p>
+<div class="refsect3">
+<a name="HinokoSystemClockId.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-SYSTEM-CLOCK-ID-POSIX-REALTIME:CAPS"></a>HINOKO_SYSTEM_CLOCK_ID_POSIX_REALTIME</p></td>
+<td class="enum_member_description">
+<p>For CLOCK_REALTIME.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-SYSTEM-CLOCK-ID-POSIX-MONOTONIC:CAPS"></a>HINOKO_SYSTEM_CLOCK_ID_POSIX_MONOTONIC</p></td>
+<td class="enum_member_description">
+<p>For CLOCK_MONOTONIC.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-SYSTEM-CLOCK-ID-LINUX-MONOTONIC-RAW:CAPS"></a>HINOKO_SYSTEM_CLOCK_ID_LINUX_MONOTONIC_RAW</p></td>
+<td class="enum_member_description">
+<p>For CLOCK_MONOTONIC_RAW.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

@@ -10,6 +10,7 @@
       <sub name="HinokoFwIsoRxSingle" link="HinokoFwIsoRxSingle.html"/>
       <sub name="HinokoFwIsoRxMultiple" link="HinokoFwIsoRxMultiple.html"/>
       <sub name="HinokoFwIsoTx" link="HinokoFwIsoTx.html"/>
+      <sub name="HinokoCycleTimer" link="hinoko-HinokoCycleTimer.html"/>
     </sub>
     <sub name="Index of all symbols" link="index-all.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
@@ -18,6 +19,7 @@
     <keyword type="enum" name="enum HinokoFwIsoCtxMode" link="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMode"/>
     <keyword type="enum" name="enum HinokoFwScode" link="hinoko-hinoko-enum-types.html#HinokoFwScode"/>
     <keyword type="enum" name="enum HinokoFwIsoCtxMatchFlag" link="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMatchFlag"/>
+    <keyword type="enum" name="enum HinokoSystemClockId" link="hinoko-hinoko-enum-types.html#HinokoSystemClockId"/>
     <keyword type="function" name="hinoko_fw_iso_ctx_get_cycle_timer ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-get-cycle-timer"/>
     <keyword type="function" name="hinoko_fw_iso_ctx_create_source ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-create-source"/>
     <keyword type="property" name="The “bytes-per-chunk” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--bytes-per-chunk"/>
@@ -52,6 +54,10 @@
     <keyword type="function" name="hinoko_fw_iso_tx_stop ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-stop"/>
     <keyword type="function" name="hinoko_fw_iso_tx_register_packet ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-register-packet"/>
     <keyword type="signal" name="The “interrupted” signal" link="HinokoFwIsoTx.html#HinokoFwIsoTx-interrupted"/>
+    <keyword type="function" name="hinoko_cycle_timer_new ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-new"/>
+    <keyword type="function" name="hinoko_cycle_timer_get_timestamp ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-timestamp"/>
+    <keyword type="function" name="hinoko_cycle_timer_get_clock_id ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-clock-id"/>
+    <keyword type="function" name="hinoko_cycle_timer_get_cycle_timer ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-cycle-timer"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MODE_TX" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MODE-TX:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MODE_RX_SINGLE" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MODE-RX-SINGLE:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MODE_RX_MULTIPLE" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MODE-RX-MULTIPLE:CAPS"/>
@@ -65,5 +71,8 @@
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG1" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG1:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG2" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG2:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG3" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG3:CAPS"/>
+    <keyword type="constant" name="HINOKO_SYSTEM_CLOCK_ID_POSIX_REALTIME" link="hinoko-hinoko-enum-types.html#HINOKO-SYSTEM-CLOCK-ID-POSIX-REALTIME:CAPS"/>
+    <keyword type="constant" name="HINOKO_SYSTEM_CLOCK_ID_POSIX_MONOTONIC" link="hinoko-hinoko-enum-types.html#HINOKO-SYSTEM-CLOCK-ID-POSIX-MONOTONIC:CAPS"/>
+    <keyword type="constant" name="HINOKO_SYSTEM_CLOCK_ID_LINUX_MONOTONIC_RAW" link="hinoko-hinoko-enum-types.html#HINOKO-SYSTEM-CLOCK-ID-LINUX-MONOTONIC-RAW:CAPS"/>
   </functions>
 </book>
