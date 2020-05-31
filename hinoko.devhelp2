@@ -11,6 +11,8 @@
       <sub name="HinokoFwIsoRxMultiple" link="HinokoFwIsoRxMultiple.html"/>
       <sub name="HinokoFwIsoTx" link="HinokoFwIsoTx.html"/>
       <sub name="HinokoCycleTimer" link="hinoko-HinokoCycleTimer.html"/>
+      <sub name="HinokoFwIsoResource" link="HinokoFwIsoResource.html"/>
+      <sub name="HinokoFwIsoResourceAuto" link="HinokoFwIsoResourceAuto.html"/>
     </sub>
     <sub name="Index of all symbols" link="index-all.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
@@ -58,6 +60,24 @@
     <keyword type="function" name="hinoko_cycle_timer_get_timestamp ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-timestamp"/>
     <keyword type="function" name="hinoko_cycle_timer_get_clock_id ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-clock-id"/>
     <keyword type="function" name="hinoko_cycle_timer_get_cycle_timer ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-cycle-timer"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_new ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-new"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_open ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-open"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_create_source ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-create-source"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_calculate_bandwidth ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-calculate-bandwidth"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_allocate_once_async ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-allocate-once-async"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_deallocate_once_async ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-deallocate-once-async"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_allocate_once_sync ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-allocate-once-sync"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_deallocate_once_sync ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-deallocate-once-sync"/>
+    <keyword type="signal" name="The “allocated” signal" link="HinokoFwIsoResource.html#HinokoFwIsoResource-allocated"/>
+    <keyword type="signal" name="The “deallocated” signal" link="HinokoFwIsoResource.html#HinokoFwIsoResource-deallocated"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_auto_new ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-new"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_auto_allocate_async ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-allocate-async"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_auto_allocate_sync ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-allocate-sync"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_auto_deallocate_async ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-deallocate-async"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_auto_deallocate_sync ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-deallocate-sync"/>
+    <keyword type="property" name="The “allocated” property" link="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--allocated"/>
+    <keyword type="property" name="The “bandwidth” property" link="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--bandwidth"/>
+    <keyword type="property" name="The “channel” property" link="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--channel"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MODE_TX" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MODE-TX:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MODE_RX_SINGLE" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MODE-RX-SINGLE:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MODE_RX_MULTIPLE" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MODE-RX-MULTIPLE:CAPS"/>

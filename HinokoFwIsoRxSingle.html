@@ -8,7 +8,7 @@
 <link rel="up" href="hinoko-fw-iso.html" title="Hinoko objects for isochronous context of 1394 OHCI.">
 <link rel="prev" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx">
 <link rel="next" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple">
-<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -38,8 +38,8 @@
 <a name="HinokoFwIsoRxSingle.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -113,20 +113,20 @@
 <a name="HinokoFwIsoRxSingle.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody><tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="HinokoFwIsoRxSingle.html#HinokoFwIsoRxSingle-interrupted" title="The “interrupted” signal">interrupted</a></td>
-<td class="signal_flags">Run Last</td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="HinokoFwIsoRxSingle.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx">HinokoFwIsoCtx</a>
         <span class="lineart">╰──</span> HinokoFwIsoRxSingle
 </pre>
@@ -156,10 +156,9 @@ hinoko_fw_iso_rx_single_new (<em class="parameter"><code><span class="type">void
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_rx_single_allocate (<em class="parameter"><code><a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle"><span class="type">HinokoFwIsoRxSingle</span></a> *self</code></em>,
                                   <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
-                                  <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwScode" title="enum HinokoFwScode"><span class="type">HinokoFwScode</span></a> scode</code></em>,
-                                  <em class="parameter"><code><span class="type">guint</span> channel</code></em>,
-                                  <em class="parameter"><code><span class="type">guint</span> header_size</code></em>,
-                                  <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> channel</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> header_size</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Allocate an IR context to 1394 OHCI controller for packet-per-buffer mode.
 A local node of the node corresponding to the given path is used as the
 controller, thus any path is accepted as long as process has enough
@@ -184,11 +183,6 @@ permission for the path.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>scode</p></td>
-<td class="parameter_description"><p>A <a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwScode" title="enum HinokoFwScode"><span class="type">HinokoFwScode</span></a> to indicate speed of isochronous communication.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
 <td class="parameter_name"><p>channel</p></td>
 <td class="parameter_description"><p>An isochronous channel to listen.</p></td>
 <td class="parameter_annotations"> </td>
@@ -200,7 +194,7 @@ permission for the path.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -234,9 +228,9 @@ hinoko_fw_iso_rx_single_release (<em class="parameter"><code><a class="link" hre
 <a name="hinoko-fw-iso-rx-single-map-buffer"></a><h3>hinoko_fw_iso_rx_single_map_buffer ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_rx_single_map_buffer (<em class="parameter"><code><a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle"><span class="type">HinokoFwIsoRxSingle</span></a> *self</code></em>,
-                                    <em class="parameter"><code><span class="type">guint</span> maximum_bytes_per_payload</code></em>,
-                                    <em class="parameter"><code><span class="type">guint</span> payloads_per_buffer</code></em>,
-                                    <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> maximum_bytes_per_payload</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> payloads_per_buffer</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
@@ -266,11 +260,11 @@ of IR context.</p>
 <a name="hinoko-fw-iso-rx-single-start"></a><h3>hinoko_fw_iso_rx_single_start ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_rx_single_start (<em class="parameter"><code><a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle"><span class="type">HinokoFwIsoRxSingle</span></a> *self</code></em>,
-                               <em class="parameter"><code>const <span class="type">guint16</span> *cycle_match</code></em>,
-                               <em class="parameter"><code><span class="type">guint32</span> sync</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *cycle_match</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> sync</code></em>,
                                <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMatchFlag" title="enum HinokoFwIsoCtxMatchFlag"><span class="type">HinokoFwIsoCtxMatchFlag</span></a> tags</code></em>,
-                               <em class="parameter"><code><span class="type">guint</span> packets_per_irq</code></em>,
-                               <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> packets_per_irq</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Start IR context.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-rx-single-start.parameters"></a><h4>Parameters</h4>
@@ -313,7 +307,7 @@ ignored.</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -347,10 +341,10 @@ hinoko_fw_iso_rx_single_stop (<em class="parameter"><code><a class="link" href="
 <a name="hinoko-fw-iso-rx-single-get-payload"></a><h3>hinoko_fw_iso_rx_single_get_payload ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_rx_single_get_payload (<em class="parameter"><code><a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle"><span class="type">HinokoFwIsoRxSingle</span></a> *self</code></em>,
-                                     <em class="parameter"><code><span class="type">guint</span> index</code></em>,
-                                     <em class="parameter"><code>const <span class="type">guint8</span> **payload</code></em>,
-                                     <em class="parameter"><code><span class="type">guint</span> *length</code></em>,
-                                     <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index</code></em>,
+                                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **payload</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *length</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Retrieve payload of IR context for a handled packet corresponding to index.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-rx-single-get-payload.parameters"></a><h4>Parameters</h4>
@@ -375,7 +369,7 @@ hinoko_fw_iso_rx_single_get_payload (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>payload</p></td>
 <td class="parameter_description"><p>The
 array with data frame for payload of IR context. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>length</p></td>
@@ -385,7 +379,7 @@ array with data frame for payload of IR context. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -394,20 +388,17 @@ array with data frame for payload of IR context. </p></td>
 </div>
 </div>
 <div class="refsect1">
-<a name="HinokoFwIsoRxSingle.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="HinokoFwIsoRxSingle.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
 <a name="HinokoFwIsoRxSingle-interrupted"></a><h3>The <code class="literal">“interrupted”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle"><span class="type">HinokoFwIsoRxSingle</span></a> *self,
-               <span class="type">guint</span>                sec,
-               <span class="type">guint</span>                cycle,
-               <span class="type">gpointer</span>             header,
-               <span class="type">guint</span>                header_length,
-               <span class="type">guint</span>                count,
-               <span class="type">gpointer</span>             user_data)</pre>
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                sec,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                cycle,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             header,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                header_length,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                count,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)</pre>
 <p>When any packet is available, the <a class="link" href="HinokoFwIsoRxSingle.html#HinokoFwIsoRxSingle-interrupted" title="The “interrupted” signal"><span class="type">“interrupted”</span></a>
 signal is emitted with header of the packet. In a handler of the
 signal, payload of received packet is available by a call of
@@ -461,11 +452,11 @@ headers of IR context for handled packets. </p></td>
 </tbody>
 </table></div>
 </div>
-<p>Flags: Run Last</p>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.28</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

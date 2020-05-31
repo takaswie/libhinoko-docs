@@ -6,9 +6,9 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="Hinoko Reference Manual">
 <link rel="up" href="index.html" title="Hinoko Reference Manual">
-<link rel="prev" href="hinoko-HinokoCycleTimer.html" title="HinokoCycleTimer">
+<link rel="prev" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">
 <link rel="next" href="annotation-glossary.html" title="Annotation Glossary">
-<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -20,7 +20,7 @@
                   <a class="shortcut" href="#idxS">S</a></span></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
-<td><a accesskey="p" href="hinoko-HinokoCycleTimer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="HinokoFwIsoResourceAuto.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="annotation-glossary.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="index">
@@ -69,6 +69,26 @@
 </dt>
 <dd></dd>
 <dt>
+<a class="link" href="HinokoFwIsoResource.html#HinokoFwIsoResource-allocated" title="The “allocated” signal">HinokoFwIsoResource::allocated</a>, object signal in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#HinokoFwIsoResource-deallocated" title="The “deallocated” signal">HinokoFwIsoResource::deallocated</a>, object signal in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--allocated" title="The “allocated” property">HinokoFwIsoResourceAuto:allocated</a>, object property in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--bandwidth" title="The “bandwidth” property">HinokoFwIsoResourceAuto:bandwidth</a>, object property in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--channel" title="The “channel” property">HinokoFwIsoResourceAuto:channel</a>, object property in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="HinokoFwIsoRxMultiple.html#HinokoFwIsoRxMultiple-interrupted" title="The “interrupted” signal">HinokoFwIsoRxMultiple::interrupted</a>, object signal in <a class="link" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple">HinokoFwIsoRxMultiple</a>
 </dt>
 <dd></dd>
@@ -94,6 +114,58 @@
 <dd></dd>
 <dt>
 <a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-get-cycle-timer" title="hinoko_fw_iso_ctx_get_cycle_timer ()">hinoko_fw_iso_ctx_get_cycle_timer</a>, function in <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx">HinokoFwIsoCtx</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-allocate-once-async" title="hinoko_fw_iso_resource_allocate_once_async ()">hinoko_fw_iso_resource_allocate_once_async</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-allocate-once-sync" title="hinoko_fw_iso_resource_allocate_once_sync ()">hinoko_fw_iso_resource_allocate_once_sync</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-allocate-async" title="hinoko_fw_iso_resource_auto_allocate_async ()">hinoko_fw_iso_resource_auto_allocate_async</a>, function in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-allocate-sync" title="hinoko_fw_iso_resource_auto_allocate_sync ()">hinoko_fw_iso_resource_auto_allocate_sync</a>, function in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-deallocate-async" title="hinoko_fw_iso_resource_auto_deallocate_async ()">hinoko_fw_iso_resource_auto_deallocate_async</a>, function in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-deallocate-sync" title="hinoko_fw_iso_resource_auto_deallocate_sync ()">hinoko_fw_iso_resource_auto_deallocate_sync</a>, function in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-new" title="hinoko_fw_iso_resource_auto_new ()">hinoko_fw_iso_resource_auto_new</a>, function in <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto">HinokoFwIsoResourceAuto</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-calculate-bandwidth" title="hinoko_fw_iso_resource_calculate_bandwidth ()">hinoko_fw_iso_resource_calculate_bandwidth</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-create-source" title="hinoko_fw_iso_resource_create_source ()">hinoko_fw_iso_resource_create_source</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-deallocate-once-async" title="hinoko_fw_iso_resource_deallocate_once_async ()">hinoko_fw_iso_resource_deallocate_once_async</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-deallocate-once-sync" title="hinoko_fw_iso_resource_deallocate_once_sync ()">hinoko_fw_iso_resource_deallocate_once_sync</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-new" title="hinoko_fw_iso_resource_new ()">hinoko_fw_iso_resource_new</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-open" title="hinoko_fw_iso_resource_open ()">hinoko_fw_iso_resource_open</a>, function in <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
 </dt>
 <dd></dd>
 <dt>
@@ -198,11 +270,15 @@ hinoko_sigs_marshal_VOID__UINT_UINT_POINTER_UINT_UINT, function in hinoko_sigs_m
 </dt>
 <dd></dd>
 <dt>
+hinoko_sigs_marshal_VOID__UINT_UINT_UINT, function in hinoko_sigs_marshal
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="hinoko-hinoko-enum-types.html#HinokoSystemClockId" title="enum HinokoSystemClockId">HinokoSystemClockId</a>, enum in <a class="link" href="hinoko-hinoko-enum-types.html" title="hinoko_enum_types">hinoko_enum_types</a>
 </dt>
 <dd></dd>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.28</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

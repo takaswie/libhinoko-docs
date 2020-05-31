@@ -8,7 +8,7 @@
 <link rel="up" href="hinoko-fw-iso.html" title="Hinoko objects for isochronous context of 1394 OHCI.">
 <link rel="prev" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple">
 <link rel="next" href="hinoko-HinokoCycleTimer.html" title="HinokoCycleTimer">
-<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -38,8 +38,8 @@
 <a name="HinokoFwIsoTx.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -113,20 +113,20 @@
 <a name="HinokoFwIsoTx.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody><tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="HinokoFwIsoTx.html#HinokoFwIsoTx-interrupted" title="The “interrupted” signal">interrupted</a></td>
-<td class="signal_flags">Run Last</td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="HinokoFwIsoTx.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx">HinokoFwIsoCtx</a>
         <span class="lineart">╰──</span> HinokoFwIsoTx
 </pre>
@@ -156,9 +156,9 @@ hinoko_fw_iso_tx_new (<em class="parameter"><code><span class="type">void</span>
 hinoko_fw_iso_tx_allocate (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
                            <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
                            <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwScode" title="enum HinokoFwScode"><span class="type">HinokoFwScode</span></a> scode</code></em>,
-                           <em class="parameter"><code><span class="type">guint</span> channel</code></em>,
-                           <em class="parameter"><code><span class="type">guint</span> header_size</code></em>,
-                           <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> channel</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> header_size</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Allocate an IT context to 1394 OHCI controller. A local node of the node
 corresponding to the given path is used as the controller, thus any path is
 accepted as long as process has enough permission for the path.</p>
@@ -198,7 +198,7 @@ accepted as long as process has enough permission for the path.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -232,9 +232,9 @@ hinoko_fw_iso_tx_release (<em class="parameter"><code><a class="link" href="Hino
 <a name="hinoko-fw-iso-tx-map-buffer"></a><h3>hinoko_fw_iso_tx_map_buffer ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_tx_map_buffer (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
-                             <em class="parameter"><code><span class="type">guint</span> maximum_bytes_per_payload</code></em>,
-                             <em class="parameter"><code><span class="type">guint</span> payloads_per_buffer</code></em>,
-                             <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> maximum_bytes_per_payload</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> payloads_per_buffer</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Map intermediate buffer to share payload of IT context with 1394 OHCI
 controller.</p>
 <div class="refsect3">
@@ -263,7 +263,7 @@ controller.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -298,9 +298,9 @@ of IT context.</p>
 <a name="hinoko-fw-iso-tx-start"></a><h3>hinoko_fw_iso_tx_start ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_tx_start (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
-                        <em class="parameter"><code>const <span class="type">guint16</span> *cycle_match</code></em>,
-                        <em class="parameter"><code><span class="type">guint</span> packets_per_irq</code></em>,
-                        <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *cycle_match</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> packets_per_irq</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Start IT context.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-tx-start.parameters"></a><h4>Parameters</h4>
@@ -333,7 +333,7 @@ Linux FireWire subsystem.</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -368,12 +368,12 @@ hinoko_fw_iso_tx_stop (<em class="parameter"><code><a class="link" href="HinokoF
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_tx_register_packet (<em class="parameter"><code><a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self</code></em>,
                                   <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMatchFlag" title="enum HinokoFwIsoCtxMatchFlag"><span class="type">HinokoFwIsoCtxMatchFlag</span></a> tags</code></em>,
-                                  <em class="parameter"><code><span class="type">guint</span> sy</code></em>,
-                                  <em class="parameter"><code>const <span class="type">guint8</span> *header</code></em>,
-                                  <em class="parameter"><code><span class="type">guint</span> header_length</code></em>,
-                                  <em class="parameter"><code>const <span class="type">guint8</span> *payload</code></em>,
-                                  <em class="parameter"><code><span class="type">guint</span> payload_length</code></em>,
-                                  <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sy</code></em>,
+                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *header</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> header_length</code></em>,
+                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *payload</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> payload_length</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Register packet data in a shape of header and payload of IT context.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-tx-register-packet.parameters"></a><h4>Parameters</h4>
@@ -425,7 +425,7 @@ for isochronous packet. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -434,20 +434,17 @@ for isochronous packet. </p></td>
 </div>
 </div>
 <div class="refsect1">
-<a name="HinokoFwIsoTx.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="HinokoFwIsoTx.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
 <a name="HinokoFwIsoTx-interrupted"></a><h3>The <code class="literal">“interrupted”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx"><span class="type">HinokoFwIsoTx</span></a> *self,
-               <span class="type">guint</span>          sec,
-               <span class="type">guint</span>          cycle,
-               <span class="type">gpointer</span>       tstamp,
-               <span class="type">guint</span>          tstamp_length,
-               <span class="type">guint</span>          count,
-               <span class="type">gpointer</span>       user_data)</pre>
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>          sec,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>          cycle,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       tstamp,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>          tstamp_length,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>          count,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
 <p>When registered packets are handled, <a class="link" href="HinokoFwIsoTx.html#HinokoFwIsoTx-interrupted" title="The “interrupted” signal"><span class="type">“interrupted”</span></a>
 signal is emitted with timestamps of the packet.</p>
 <div class="refsect3">
@@ -499,11 +496,11 @@ of timestamps for packets already handled. </p></td>
 </tbody>
 </table></div>
 </div>
-<p>Flags: Run Last</p>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.28</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>
