@@ -21,9 +21,13 @@
     <keyword type="enum" name="enum HinokoFwIsoCtxMode" link="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMode"/>
     <keyword type="enum" name="enum HinokoFwScode" link="hinoko-hinoko-enum-types.html#HinokoFwScode"/>
     <keyword type="enum" name="enum HinokoFwIsoCtxMatchFlag" link="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxMatchFlag"/>
-    <keyword type="enum" name="enum HinokoSystemClockId" link="hinoko-hinoko-enum-types.html#HinokoSystemClockId"/>
+    <keyword type="enum" name="enum HinokoFwIsoResourceError" link="hinoko-hinoko-enum-types.html#HinokoFwIsoResourceError"/>
+    <keyword type="enum" name="enum HinokoFwIsoResourceAutoError" link="hinoko-hinoko-enum-types.html#HinokoFwIsoResourceAutoError"/>
+    <keyword type="enum" name="enum HinokoFwIsoCtxError" link="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxError"/>
+    <keyword type="function" name="hinoko_fw_iso_ctx_error_quark ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-error-quark"/>
     <keyword type="function" name="hinoko_fw_iso_ctx_get_cycle_timer ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-get-cycle-timer"/>
     <keyword type="function" name="hinoko_fw_iso_ctx_create_source ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-create-source"/>
+    <keyword type="macro" name="HINOKO_FW_ISO_CTX_ERROR" link="HinokoFwIsoCtx.html#HINOKO-FW-ISO-CTX-ERROR:CAPS"/>
     <keyword type="property" name="The “bytes-per-chunk” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--bytes-per-chunk"/>
     <keyword type="property" name="The “chunks-per-buffer” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--chunks-per-buffer"/>
     <keyword type="property" name="The “registered-chunk-count” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--registered-chunk-count"/>
@@ -60,6 +64,7 @@
     <keyword type="function" name="hinoko_cycle_timer_get_timestamp ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-timestamp"/>
     <keyword type="function" name="hinoko_cycle_timer_get_clock_id ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-clock-id"/>
     <keyword type="function" name="hinoko_cycle_timer_get_cycle_timer ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-cycle-timer"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_error_quark ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark"/>
     <keyword type="function" name="hinoko_fw_iso_resource_new ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-new"/>
     <keyword type="function" name="hinoko_fw_iso_resource_open ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-open"/>
     <keyword type="function" name="hinoko_fw_iso_resource_create_source ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-create-source"/>
@@ -68,13 +73,16 @@
     <keyword type="function" name="hinoko_fw_iso_resource_deallocate_once_async ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-deallocate-once-async"/>
     <keyword type="function" name="hinoko_fw_iso_resource_allocate_once_sync ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-allocate-once-sync"/>
     <keyword type="function" name="hinoko_fw_iso_resource_deallocate_once_sync ()" link="HinokoFwIsoResource.html#hinoko-fw-iso-resource-deallocate-once-sync"/>
+    <keyword type="macro" name="HINOKO_FW_ISO_RESOURCE_ERROR" link="HinokoFwIsoResource.html#HINOKO-FW-ISO-RESOURCE-ERROR:CAPS"/>
     <keyword type="signal" name="The “allocated” signal" link="HinokoFwIsoResource.html#HinokoFwIsoResource-allocated"/>
     <keyword type="signal" name="The “deallocated” signal" link="HinokoFwIsoResource.html#HinokoFwIsoResource-deallocated"/>
+    <keyword type="function" name="hinoko_fw_iso_resource_auto_error_quark ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-error-quark"/>
     <keyword type="function" name="hinoko_fw_iso_resource_auto_new ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-new"/>
     <keyword type="function" name="hinoko_fw_iso_resource_auto_allocate_async ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-allocate-async"/>
     <keyword type="function" name="hinoko_fw_iso_resource_auto_allocate_sync ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-allocate-sync"/>
     <keyword type="function" name="hinoko_fw_iso_resource_auto_deallocate_async ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-deallocate-async"/>
     <keyword type="function" name="hinoko_fw_iso_resource_auto_deallocate_sync ()" link="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-deallocate-sync"/>
+    <keyword type="macro" name="HINOKO_FW_ISO_RESOURCE_AUTO_ERROR" link="HinokoFwIsoResourceAuto.html#HINOKO-FW-ISO-RESOURCE-AUTO-ERROR:CAPS"/>
     <keyword type="property" name="The “allocated” property" link="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--allocated"/>
     <keyword type="property" name="The “bandwidth” property" link="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--bandwidth"/>
     <keyword type="property" name="The “channel” property" link="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--channel"/>
@@ -91,8 +99,21 @@
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG1" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG1:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG2" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG2:CAPS"/>
     <keyword type="constant" name="HINOKO_FW_ISO_CTX_MATCH_FLAG_TAG3" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-MATCH-FLAG-TAG3:CAPS"/>
-    <keyword type="constant" name="HINOKO_SYSTEM_CLOCK_ID_POSIX_REALTIME" link="hinoko-hinoko-enum-types.html#HINOKO-SYSTEM-CLOCK-ID-POSIX-REALTIME:CAPS"/>
-    <keyword type="constant" name="HINOKO_SYSTEM_CLOCK_ID_POSIX_MONOTONIC" link="hinoko-hinoko-enum-types.html#HINOKO-SYSTEM-CLOCK-ID-POSIX-MONOTONIC:CAPS"/>
-    <keyword type="constant" name="HINOKO_SYSTEM_CLOCK_ID_LINUX_MONOTONIC_RAW" link="hinoko-hinoko-enum-types.html#HINOKO-SYSTEM-CLOCK-ID-LINUX-MONOTONIC-RAW:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_ERROR_FAILED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_ERROR_OPENED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-ERROR-OPENED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_ERROR_NOT_OPENED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-ERROR-NOT-OPENED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_ERROR_TIMEOUT" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-ERROR-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_ERROR_EVENT" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-ERROR-EVENT:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_FAILED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_ALLOCATED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-ALLOCATED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_NOT_ALLOCATED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-NOT-ALLOCATED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_TIMEOUT" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_FAILED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_ALLOCATED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-ALLOCATED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_NOT_ALLOCATED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-NOT-ALLOCATED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_MAPPED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-MAPPED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_NOT_MAPPED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-NOT-MAPPED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_CHUNK_UNREGISTERED" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-CHUNK-UNREGISTERED:CAPS"/>
+    <keyword type="constant" name="HINOKO_FW_ISO_CTX_ERROR_NO_ISOC_CHANNEL" link="hinoko-hinoko-enum-types.html#HINOKO-FW-ISO-CTX-ERROR-NO-ISOC-CHANNEL:CAPS"/>
   </functions>
 </book>

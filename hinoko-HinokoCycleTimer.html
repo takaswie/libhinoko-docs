@@ -75,6 +75,11 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="hinoko-HinokoCycleTimer.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;cycle_timer.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="hinoko-HinokoCycleTimer.description"></a><h2>Description</h2>
 <p>A <span class="type">HinokoCycleTimer</span> is an boxed object to represent the value of cycle
 timer and timestamp referring to clock_id.</p>
@@ -134,7 +139,7 @@ clock_id available by <a class="link" href="hinoko-HinokoCycleTimer.html#hinoko-
 <a name="hinoko-cycle-timer-get-clock-id"></a><h3>hinoko_cycle_timer_get_clock_id ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_cycle_timer_get_clock_id (<em class="parameter"><code><span class="type">HinokoCycleTimer</span> *self</code></em>,
-                                 <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoSystemClockId" title="enum HinokoSystemClockId"><span class="type">HinokoSystemClockId</span></a> *clock_id</code></em>);</pre>
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *clock_id</code></em>);</pre>
 <p>Get the ID of clock for timestamp.</p>
 <div class="refsect3">
 <a name="hinoko-cycle-timer-get-clock-id.parameters"></a><h4>Parameters</h4>
@@ -152,7 +157,9 @@ hinoko_cycle_timer_get_clock_id (<em class="parameter"><code><span class="type">
 </tr>
 <tr>
 <td class="parameter_name"><p>clock_id</p></td>
-<td class="parameter_description"><p>The ID of clock for timestamp, one of HinokoSystemClockId. </p></td>
+<td class="parameter_description"><p>The numerical ID of clock source for the reference
+timestamp. One CLOCK_REALTIME(0), CLOCK_MONOTONIC(1), and
+CLOCK_MONOTONIC_RAW(4) is available in UAPI of Linux kernel. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>

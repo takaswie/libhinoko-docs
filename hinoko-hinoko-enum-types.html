@@ -54,7 +54,15 @@
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="hinoko-hinoko-enum-types.html#HinokoSystemClockId" title="enum HinokoSystemClockId">HinokoSystemClockId</a></td>
+<td class="function_name"><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoResourceError" title="enum HinokoFwIsoResourceError">HinokoFwIsoResourceError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoResourceAutoError" title="enum HinokoFwIsoResourceAutoError">HinokoFwIsoResourceAutoError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxError" title="enum HinokoFwIsoCtxError">HinokoFwIsoCtxError</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -63,8 +71,7 @@
 <a name="hinoko-hinoko-enum-types.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> HinokoFwIsoCtxMode
-    <span class="lineart">├──</span> HinokoFwScode
-    <span class="lineart">╰──</span> HinokoSystemClockId
+    <span class="lineart">╰──</span> HinokoFwScode
     <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
     <span class="lineart">╰──</span> HinokoFwIsoCtxMatchFlag
 </pre>
@@ -223,11 +230,10 @@
 </div>
 <hr>
 <div class="refsect2">
-<a name="HinokoSystemClockId"></a><h3>enum HinokoSystemClockId</h3>
-<p>A set of enumerations for ID of system reference clock. In detail, please
-refer to manual of clock_gettime(2).</p>
+<a name="HinokoFwIsoResourceError"></a><h3>enum HinokoFwIsoResourceError</h3>
+<p>A set of error code for GError with domain which equals to <a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark" title="hinoko_fw_iso_resource_error_quark ()"><code class="function">hinoko_fw_iso_resource_error_quark()</code></a>;</p>
 <div class="refsect3">
-<a name="HinokoSystemClockId.members"></a><h4>Members</h4>
+<a name="HinokoFwIsoResourceError.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -236,23 +242,157 @@ refer to manual of clock_gettime(2).</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="enum_member_name"><p><a name="HINOKO-SYSTEM-CLOCK-ID-POSIX-REALTIME:CAPS"></a>HINOKO_SYSTEM_CLOCK_ID_POSIX_REALTIME</p></td>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-ERROR-FAILED:CAPS"></a>HINOKO_FW_ISO_RESOURCE_ERROR_FAILED</p></td>
 <td class="enum_member_description">
-<p>For CLOCK_REALTIME.</p>
+<p>The system call fails.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="HINOKO-SYSTEM-CLOCK-ID-POSIX-MONOTONIC:CAPS"></a>HINOKO_SYSTEM_CLOCK_ID_POSIX_MONOTONIC</p></td>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-ERROR-OPENED:CAPS"></a>HINOKO_FW_ISO_RESOURCE_ERROR_OPENED</p></td>
 <td class="enum_member_description">
-<p>For CLOCK_MONOTONIC.</p>
+<p>The instance is already associated to any firewire
+					character device.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="HINOKO-SYSTEM-CLOCK-ID-LINUX-MONOTONIC-RAW:CAPS"></a>HINOKO_SYSTEM_CLOCK_ID_LINUX_MONOTONIC_RAW</p></td>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-ERROR-NOT-OPENED:CAPS"></a>HINOKO_FW_ISO_RESOURCE_ERROR_NOT_OPENED</p></td>
 <td class="enum_member_description">
-<p>For CLOCK_MONOTONIC_RAW.</p>
+<p>The instance is not associated to any firewire
+					character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-ERROR-TIMEOUT:CAPS"></a>HINOKO_FW_ISO_RESOURCE_ERROR_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>No event to the request arrives within timeout.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-ERROR-EVENT:CAPS"></a>HINOKO_FW_ISO_RESOURCE_ERROR_EVENT</p></td>
+<td class="enum_member_description">
+<p>Event for the request arrives but includes error code.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinokoFwIsoResourceAutoError"></a><h3>enum HinokoFwIsoResourceAutoError</h3>
+<p>A set of error code for GError with domain which equals to <a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark" title="hinoko_fw_iso_resource_error_quark ()"><code class="function">hinoko_fw_iso_resource_error_quark()</code></a>;</p>
+<div class="refsect3">
+<a name="HinokoFwIsoResourceAutoError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-FAILED:CAPS"></a>HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>The system call fails.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-ALLOCATED:CAPS"></a>HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_ALLOCATED</p></td>
+<td class="enum_member_description">
+<p>The instance is already associated to
+						allocated isochronous resources.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-NOT-ALLOCATED:CAPS"></a>HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_NOT_ALLOCATED</p></td>
+<td class="enum_member_description">
+<p>The instance is not associated to allocated
+						isochronous resources.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-RESOURCE-AUTO-ERROR-TIMEOUT:CAPS"></a>HINOKO_FW_ISO_RESOURCE_AUTO_ERROR_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>No event to the request arrives within
+						timeout.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinokoFwIsoCtxError"></a><h3>enum HinokoFwIsoCtxError</h3>
+<p>A set of error code for GError with domain which equals to <a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-error-quark" title="hinoko_fw_iso_ctx_error_quark ()"><code class="function">hinoko_fw_iso_ctx_error_quark()</code></a>;</p>
+<div class="refsect3">
+<a name="HinokoFwIsoCtxError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-FAILED:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>The system call fails.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-ALLOCATED:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_ALLOCATED</p></td>
+<td class="enum_member_description">
+<p>The instance is already associated to any firewire
+	        			character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-NOT-ALLOCATED:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_NOT_ALLOCATED</p></td>
+<td class="enum_member_description">
+<p>The instance is not associated to any firewire
+					character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-MAPPED:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_MAPPED</p></td>
+<td class="enum_member_description">
+<p>The intermediate buffer is already mapped to the
+					process.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-NOT-MAPPED:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_NOT_MAPPED</p></td>
+<td class="enum_member_description">
+<p>The intermediate buffer is not mapped to the
+					process.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-CHUNK-UNREGISTERED:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_CHUNK_UNREGISTERED</p></td>
+<td class="enum_member_description">
+<p>No chunk registered before starting.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINOKO-FW-ISO-CTX-ERROR-NO-ISOC-CHANNEL:CAPS"></a>HINOKO_FW_ISO_CTX_ERROR_NO_ISOC_CHANNEL</p></td>
+<td class="enum_member_description">
+<p>No isochronous channel is available.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

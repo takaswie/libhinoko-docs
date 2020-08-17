@@ -44,6 +44,14 @@
 <tbody>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-error-quark" title="hinoko_fw_iso_ctx_error_quark ()">hinoko_fw_iso_ctx_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -104,12 +112,30 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="HinokoFwIsoCtx.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="HinokoFwIsoCtx.html#HINOKO-FW-ISO-CTX-ERROR:CAPS" title="HINOKO_FW_ISO_CTX_ERROR">HINOKO_FW_ISO_CTX_ERROR</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="HinokoFwIsoCtx.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> HinokoFwIsoCtx
         <span class="lineart">├──</span> <a class="link" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple">HinokoFwIsoRxMultiple</a>
         <span class="lineart">├──</span> <a class="link" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle">HinokoFwIsoRxSingle</a>
         <span class="lineart">╰──</span> <a class="link" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx">HinokoFwIsoTx</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;fw_iso_ctx.h&gt;
 </pre>
 </div>
 <div class="refsect1">
@@ -122,10 +148,21 @@ use, therefore a few method and properties are available for applications.</p>
 <div class="refsect1">
 <a name="HinokoFwIsoCtx.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
+<a name="hinoko-fw-iso-ctx-error-quark"></a><h3>hinoko_fw_iso_ctx_error_quark ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+hinoko_fw_iso_ctx_error_quark ();</pre>
+<p>Return the GQuark for error domain of GError which has code in <a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoCtxError" title="enum HinokoFwIsoCtxError"><span class="type">HinokoFwIsoCtxError</span></a>.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-ctx-error-quark.returns"></a><h4>Returns</h4>
+<p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hinoko-fw-iso-ctx-get-cycle-timer"></a><h3>hinoko_fw_iso_ctx_get_cycle_timer ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinoko_fw_iso_ctx_get_cycle_timer (<em class="parameter"><code><a class="link" href="HinokoFwIsoCtx.html" title="HinokoFwIsoCtx"><span class="type">HinokoFwIsoCtx</span></a> *self</code></em>,
-                                   <em class="parameter"><code><a class="link" href="hinoko-hinoko-enum-types.html#HinokoSystemClockId" title="enum HinokoSystemClockId"><span class="type">HinokoSystemClockId</span></a> clock_id</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> clock_id</code></em>,
                                    <em class="parameter"><code><span class="type">HinokoCycleTimer</span> *const *cycle_timer</code></em>,
                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Retrieve the value of cycle timer register. This method call is available
@@ -146,7 +183,9 @@ once any isochronous context is created.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>clock_id</p></td>
-<td class="parameter_description"><p>A <a class="link" href="hinoko-hinoko-enum-types.html#HinokoSystemClockId" title="enum HinokoSystemClockId"><span class="type">HinokoSystemClockId</span></a> to get reference timestamp.</p></td>
+<td class="parameter_description"><p>The numerical ID of clock source for the reference timestamp. One
+CLOCK_REALTIME(0), CLOCK_MONOTONIC(1), and CLOCK_MONOTONIC_RAW(2)
+is available in UAPI of Linux kernel.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -198,6 +237,14 @@ hinoko_fw_iso_ctx_create_source (<em class="parameter"><code><a class="link" hre
 </tbody>
 </table></div>
 </div>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoCtx.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HINOKO-FW-ISO-CTX-ERROR:CAPS"></a><h3>HINOKO_FW_ISO_CTX_ERROR</h3>
+<pre class="programlisting">#define HINOKO_FW_ISO_CTX_ERROR		hinoko_fw_iso_ctx_error_quark()
+</pre>
 </div>
 </div>
 <div class="refsect1">

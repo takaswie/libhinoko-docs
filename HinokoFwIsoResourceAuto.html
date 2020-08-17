@@ -43,6 +43,14 @@
 <tbody>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-error-quark" title="hinoko_fw_iso_resource_auto_error_quark ()">hinoko_fw_iso_resource_auto_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto"><span class="returnvalue">HinokoFwIsoResourceAuto</span></a> *
 </td>
 <td class="function_name">
@@ -112,10 +120,28 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="HinokoFwIsoResourceAuto.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="HinokoFwIsoResourceAuto.html#HINOKO-FW-ISO-RESOURCE-AUTO-ERROR:CAPS" title="HINOKO_FW_ISO_RESOURCE_AUTO_ERROR">HINOKO_FW_ISO_RESOURCE_AUTO_ERROR</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="HinokoFwIsoResourceAuto.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="HinokoFwIsoResource.html" title="HinokoFwIsoResource">HinokoFwIsoResource</a>
         <span class="lineart">╰──</span> HinokoFwIsoResourceAuto
+</pre>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoResourceAuto.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;fw_iso_resource_auto.h&gt;
 </pre>
 </div>
 <div class="refsect1">
@@ -127,6 +153,18 @@ isochronous resource is done by Linux FireWire subsystem.</p>
 </div>
 <div class="refsect1">
 <a name="HinokoFwIsoResourceAuto.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinoko-fw-iso-resource-auto-error-quark"></a><h3>hinoko_fw_iso_resource_auto_error_quark ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+hinoko_fw_iso_resource_auto_error_quark
+                               ();</pre>
+<p>Return the GQuark for error domain of GError which has code in <a class="link" href="hinoko-hinoko-enum-types.html#HinokoFwIsoResourceAutoError" title="enum HinokoFwIsoResourceAutoError"><span class="type">HinokoFwIsoResourceAutoError</span></a>.</p>
+<div class="refsect3">
+<a name="hinoko-fw-iso-resource-auto-error-quark.returns"></a><h4>Returns</h4>
+<p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
+</div>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hinoko-fw-iso-resource-auto-new"></a><h3>hinoko_fw_iso_resource_auto_new ()</h3>
 <pre class="programlisting"><a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto"><span class="returnvalue">HinokoFwIsoResourceAuto</span></a> *
@@ -143,7 +181,7 @@ hinoko_fw_iso_resource_auto_allocate_async
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> bandwidth</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Initiate allocation of isochronous resource. When the allocation is done,
-::allocated signal is emit to notify the result, channel, and bandwidth.</p>
+<a class="link" href="HinokoFwIsoResource.html#HinokoFwIsoResource-allocated" title="The “allocated” signal"><span class="type">“allocated”</span></a> signal is emit to notify the result, channel, and bandwidth.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-resource-auto-allocate-async.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -177,7 +215,8 @@ to be allocated. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark" title="hinoko_fw_iso_resource_error_quark ()"><code class="function">hinoko_fw_iso_resource_error_quark()</code></a>, and <a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-error-quark" title="hinoko_fw_iso_resource_auto_error_quark ()"><code class="function">hinoko_fw_iso_resource_auto_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -194,9 +233,9 @@ hinoko_fw_iso_resource_auto_allocate_sync
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> channel_candidates_count</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> bandwidth</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
-<p>Initiate allocation of isochronous resource and wait for ::allocated signal.
-When the call is successful, ::channel and ::bandwidth property are
-available.</p>
+<p>Initiate allocation of isochronous resource and wait for <a class="link" href="HinokoFwIsoResource.html#HinokoFwIsoResource-allocated" title="The “allocated” signal"><span class="type">“allocated”</span></a> signal.
+When the call is successful, <a class="link" href="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--channel" title="The “channel” property"><span class="type">“channel”</span></a> and <a class="link" href="HinokoFwIsoResourceAuto.html#HinokoFwIsoResourceAuto--bandwidth" title="The “bandwidth” property"><span class="type">“bandwidth”</span></a>
+properties are available.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-resource-auto-allocate-sync.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -230,7 +269,8 @@ to be allocated. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark" title="hinoko_fw_iso_resource_error_quark ()"><code class="function">hinoko_fw_iso_resource_error_quark()</code></a>, and <a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-error-quark" title="hinoko_fw_iso_resource_auto_error_quark ()"><code class="function">hinoko_fw_iso_resource_auto_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -245,7 +285,7 @@ hinoko_fw_iso_resource_auto_deallocate_async
                                (<em class="parameter"><code><a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto"><span class="type">HinokoFwIsoResourceAuto</span></a> *self</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Initiate deallocation of isochronous resource. When the deallocation is done,
-::deallocated signal is emit to notify the result, channel, and bandwidth.</p>
+<a class="link" href="HinokoFwIsoResource.html#HinokoFwIsoResource-deallocated" title="The “deallocated” signal"><span class="type">“deallocated”</span></a> signal is emit to notify the result, channel, and bandwidth.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-resource-auto-deallocate-async.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -262,7 +302,8 @@ hinoko_fw_iso_resource_auto_deallocate_async
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark" title="hinoko_fw_iso_resource_error_quark ()"><code class="function">hinoko_fw_iso_resource_error_quark()</code></a>, and <a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-error-quark" title="hinoko_fw_iso_resource_auto_error_quark ()"><code class="function">hinoko_fw_iso_resource_auto_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -277,7 +318,7 @@ hinoko_fw_iso_resource_auto_deallocate_sync
                                (<em class="parameter"><code><a class="link" href="HinokoFwIsoResourceAuto.html" title="HinokoFwIsoResourceAuto"><span class="type">HinokoFwIsoResourceAuto</span></a> *self</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Initiate deallocation of isochronous resource. When the deallocation is done,
-::deallocated signal is emit to notify the result, channel, and bandwidth.</p>
+<a class="link" href="HinokoFwIsoResource.html#HinokoFwIsoResource-deallocated" title="The “deallocated” signal"><span class="type">“deallocated”</span></a> signal is emit to notify the result, channel, and bandwidth.</p>
 <div class="refsect3">
 <a name="hinoko-fw-iso-resource-auto-deallocate-sync.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -294,12 +335,21 @@ hinoko_fw_iso_resource_auto_deallocate_sync
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of
+<a class="link" href="HinokoFwIsoResource.html#hinoko-fw-iso-resource-error-quark" title="hinoko_fw_iso_resource_error_quark ()"><code class="function">hinoko_fw_iso_resource_error_quark()</code></a>, and <a class="link" href="HinokoFwIsoResourceAuto.html#hinoko-fw-iso-resource-auto-error-quark" title="hinoko_fw_iso_resource_auto_error_quark ()"><code class="function">hinoko_fw_iso_resource_auto_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinokoFwIsoResourceAuto.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HINOKO-FW-ISO-RESOURCE-AUTO-ERROR:CAPS"></a><h3>HINOKO_FW_ISO_RESOURCE_AUTO_ERROR</h3>
+<pre class="programlisting">#define HINOKO_FW_ISO_RESOURCE_AUTO_ERROR hinoko_fw_iso_resource_auto_error_quark()
+</pre>
 </div>
 </div>
 <div class="refsect1">
