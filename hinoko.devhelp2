@@ -27,6 +27,7 @@
     <keyword type="function" name="hinoko_fw_iso_ctx_error_quark ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-error-quark"/>
     <keyword type="function" name="hinoko_fw_iso_ctx_get_cycle_timer ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-get-cycle-timer"/>
     <keyword type="function" name="hinoko_fw_iso_ctx_create_source ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-create-source"/>
+    <keyword type="function" name="hinoko_fw_iso_ctx_flush_completions ()" link="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-flush-completions" since="0.6."/>
     <keyword type="macro" name="HINOKO_FW_ISO_CTX_ERROR" link="HinokoFwIsoCtx.html#HINOKO-FW-ISO-CTX-ERROR:CAPS"/>
     <keyword type="property" name="The “bytes-per-chunk” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--bytes-per-chunk"/>
     <keyword type="property" name="The “chunks-per-buffer” property" link="HinokoFwIsoCtx.html#HinokoFwIsoCtx--chunks-per-buffer"/>
@@ -37,7 +38,8 @@
     <keyword type="function" name="hinoko_fw_iso_rx_single_release ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-release"/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_map_buffer ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-map-buffer"/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_unmap_buffer ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-unmap-buffer"/>
-    <keyword type="function" name="hinoko_fw_iso_rx_single_start ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-start"/>
+    <keyword type="function" name="hinoko_fw_iso_rx_single_register_packet ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-register-packet" since="0.6."/>
+    <keyword type="function" name="hinoko_fw_iso_rx_single_start ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-start" since="0.6."/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_stop ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-stop"/>
     <keyword type="function" name="hinoko_fw_iso_rx_single_get_payload ()" link="HinokoFwIsoRxSingle.html#hinoko-fw-iso-rx-single-get-payload"/>
     <keyword type="signal" name="The “interrupted” signal" link="HinokoFwIsoRxSingle.html#HinokoFwIsoRxSingle-interrupted"/>
@@ -56,9 +58,9 @@
     <keyword type="function" name="hinoko_fw_iso_tx_release ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-release"/>
     <keyword type="function" name="hinoko_fw_iso_tx_map_buffer ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-map-buffer"/>
     <keyword type="function" name="hinoko_fw_iso_tx_unmap_buffer ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-unmap-buffer"/>
-    <keyword type="function" name="hinoko_fw_iso_tx_start ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-start"/>
+    <keyword type="function" name="hinoko_fw_iso_tx_start ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-start" since="0.6."/>
     <keyword type="function" name="hinoko_fw_iso_tx_stop ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-stop"/>
-    <keyword type="function" name="hinoko_fw_iso_tx_register_packet ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-register-packet"/>
+    <keyword type="function" name="hinoko_fw_iso_tx_register_packet ()" link="HinokoFwIsoTx.html#hinoko-fw-iso-tx-register-packet" since="0.6."/>
     <keyword type="signal" name="The “interrupted” signal" link="HinokoFwIsoTx.html#HinokoFwIsoTx-interrupted"/>
     <keyword type="function" name="hinoko_cycle_timer_new ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-new"/>
     <keyword type="function" name="hinoko_cycle_timer_get_timestamp ()" link="hinoko-HinokoCycleTimer.html#hinoko-cycle-timer-get-timestamp"/>

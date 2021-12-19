@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>HinokoFwIsoRxMultiple: Hinoko Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="Hinoko Reference Manual">
 <link rel="up" href="hinoko-fw-iso.html" title="Hinoko objects for isochronous context of 1394 OHCI.">
 <link rel="prev" href="HinokoFwIsoRxSingle.html" title="HinokoFwIsoRxSingle">
 <link rel="next" href="HinokoFwIsoTx.html" title="HinokoFwIsoTx">
-<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -359,7 +359,9 @@ up to 15.</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>chunks_per_irq</p></td>
-<td class="parameter_description"><p>The number of chunks per interval of interrupt.</p></td>
+<td class="parameter_description"><p>The number of chunks per interval of interrupt. When 0 is given, application
+should call <a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-flush-completions" title="hinoko_fw_iso_ctx_flush_completions ()"><span class="type">hinoko_fw_iso_ctx_flush_completions</span></a> voluntarily to generate
+<a class="link" href="HinokoFwIsoRxMultiple.html#HinokoFwIsoRxMultiple-interrupted" title="The “interrupted” signal"><span class="type">“interrupted”</span></a> event.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -425,7 +427,7 @@ hinoko_fw_iso_rx_multiple_get_payload (<em class="parameter"><code><a class="lin
 <td class="parameter_name"><p>payload</p></td>
 <td class="parameter_description"><p>The array with data
 frame for payload of IR context. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>length</p></td>
@@ -461,9 +463,15 @@ frame for payload of IR context. </p></td>
 user_function (<a class="link" href="HinokoFwIsoRxMultiple.html" title="HinokoFwIsoRxMultiple"><span class="type">HinokoFwIsoRxMultiple</span></a> *self,
                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                  count,
                <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
-<p>When any packet is available, the <a class="link" href="HinokoFwIsoRxMultiple.html#HinokoFwIsoRxMultiple-interrupted" title="The “interrupted” signal"><span class="type">“interrupted”</span></a>
-signal is emitted with the number of available packets. In the
-handler, payload of received packet is available by a call of
+<p>When Linux FireWire subsystem generates interrupt event, the
+<a class="link" href="HinokoFwIsoRxMultiple.html#HinokoFwIsoRxMultiple-interrupted" title="The “interrupted” signal"><span class="type">“interrupted”</span></a> signal is emitted. There are two cases for Linux
+FireWire subsystem to generate the event:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>When OHCI 1394 controller generates hardware interrupt as a result to process the
+isochronous packet for the buffer chunk marked to generate hardware interrupt.</p></li>
+<li class="listitem"><p>When application calls <a class="link" href="HinokoFwIsoCtx.html#hinoko-fw-iso-ctx-flush-completions" title="hinoko_fw_iso_ctx_flush_completions ()"><code class="function">hinoko_fw_iso_ctx_flush_completions()</code></a> explicitly.</p></li>
+</ul></div>
+<p>The handler of signal can retrieve the content of packet by call of
 <a class="link" href="HinokoFwIsoRxMultiple.html#hinoko-fw-iso-rx-multiple-get-payload" title="hinoko_fw_iso_rx_multiple_get_payload ()"><code class="function">hinoko_fw_iso_rx_multiple_get_payload()</code></a>.</p>
 <div class="refsect3">
 <a name="HinokoFwIsoRxMultiple-interrupted.parameters"></a><h4>Parameters</h4>
@@ -497,6 +505,6 @@ handler, payload of received packet is available by a call of
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>
