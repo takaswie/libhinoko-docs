@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -115,16 +115,20 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/cycle_timer.c#L4">[src]</a>
+          
         </h4>
 
-        <pre><code><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">HinokoCycleTimer</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+        <pre><code><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">HinokoCycleTimer</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="cm">/* No available fields */</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </code></pre>
 
         <div class="docblock">
-          No description available.
+          <p>A boxed object to represent data for cycle timer.
+A <a href="struct.CycleTimer.html"><code>HinokoCycleTimer</code></a> is an boxed object to represent the value of cycle timer and timestamp
+referring to&nbsp;clock_id.</p>
         </div>
 
         
@@ -154,7 +158,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="ctor.CycleTimer.new.html">hinoko_cycle_timer_new</a></h6>
 
           <div class="docblock">
-            No description available.
+            <p>Allocate and return an instance of <code>HinokoCycleTimer</code>.</p>
           </div>
 
           
@@ -179,7 +183,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="method.CycleTimer.get_clock_id.html">hinoko_cycle_timer_get_clock_id</a></h6>
 
           <div class="docblock">
-            No description available.
+            <p>Get the <span class="caps">ID</span> of clock for&nbsp;timestamp.</p>
           </div>
 
           
@@ -189,7 +193,9 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="method.CycleTimer.get_cycle_timer.html">hinoko_cycle_timer_get_cycle_timer</a></h6>
 
           <div class="docblock">
-            No description available.
+            <p>Get the value of cycle timer in 1394 <span class="caps">OHCI</span> controller. The first element of array expresses the
+value of sec field, up to 127. The second element of array expresses the value of cycle field,
+up to 7999. The third element of array expresses the value of offset field, up to&nbsp;3071.</p>
           </div>
 
           
@@ -199,7 +205,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="method.CycleTimer.get_timestamp.html">hinoko_cycle_timer_get_timestamp</a></h6>
 
           <div class="docblock">
-            No description available.
+            <p>Get timestamp with enough sizee of strorage. The timestamp refers to clock_id available by
+<code>hinoko_cycle_timer_get_clock_id()</code>.</p>
           </div>
 
           

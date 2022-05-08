@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -79,13 +79,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
     <a class="method" href="method.FwIsoRxSingle.register_packet.html">register_packet</a>
   
-    <a class="method" href="method.FwIsoRxSingle.release.html">release</a>
-  
     <a class="method" href="method.FwIsoRxSingle.start.html">start</a>
-  
-    <a class="method" href="method.FwIsoRxSingle.stop.html">stop</a>
-  
-    <a class="method" href="method.FwIsoRxSingle.unmap_buffer.html">unmap_buffer</a>
   
   </div>
 </div>
@@ -107,7 +101,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.h#L84">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.h#L51">[src]</a>
         
       </h4>
 
@@ -117,8 +111,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <span class="w">  </span><span class="n">HinokoFwIsoRxSingle</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">guint8</span><span class="o">**</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">guint</span><span class="o">*</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
+<span class="w">  </span><span class="n">guint</span><span class="o">*</span><span class="w"> </span><span class="n">length</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
 </code></pre>
@@ -130,15 +123,19 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.c#L373">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Retrieve payload of <span class="caps">IR</span> context for a handled packet corresponding to index at the event of&nbsp;interrupt.</p>
       </div>
 
       <div class="docblock">
         <table>
           
+          
+          <tr><td>Available since:</td><td>0.7.</td></tr>
           
           
           
@@ -166,7 +163,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>The index inner available packets at the event of&nbsp;interrupt.</p></td>
           </tr>
           
           
@@ -180,19 +177,20 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           <tr class="arg-name">
             <td><code>payload</code></td>
-            <td><code>const guint8**</code></td>
+            <td>An array of&nbsp;<code>guint8</code></td>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>The array with data
+     frame for payload of <span class="caps">IR</span>&nbsp;context.</p></td>
           </tr>
+          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
           
           
           
           
           
-          
-          
+          <tr><td>&nbsp;</td><td>The length of the array is specified in the <code>length</code> argument.</td></tr>
           <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
           
           
@@ -202,8 +200,9 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>The number of bytes in the above&nbsp;payload.</p></td>
           </tr>
+          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
           
           
           
@@ -211,18 +210,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           
           
-          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
           
           
-          
-          <tr class="arg-name">
-            <td><code>error</code></td>
-            <td><code>GError **</code></td>
-          </tr>
-          <tr class="arg-description">
-            <td>&nbsp;</td>
-            <td>The return location for a <code>GError*</code>, or <code>NULL</code>.</td>
-          </tr>
           
         </table>
       </div>

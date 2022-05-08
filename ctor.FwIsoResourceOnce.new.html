@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hinoko.FW_ISO_TX_CLASS</title>
+  <title>Hinoko.FwIsoResourceOnce.new</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -24,10 +24,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta property="og:title" content="Hinoko.FW_ISO_TX_CLASS"/>
-  <meta property="og:description" content="Reference for Hinoko.FW_ISO_TX_CLASS"/>
-  <meta name="twitter:title" content="Hinoko.FW_ISO_TX_CLASS"/>
-  <meta name="twitter:description" content="Reference for Hinoko.FW_ISO_TX_CLASS"/>
+  <meta property="og:title" content="Hinoko.FwIsoResourceOnce.new"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoResourceOnce.new"/>
+  <meta name="twitter:title" content="Hinoko.FwIsoResourceOnce.new"/>
+  <meta name="twitter:description" content="Reference for Hinoko.FwIsoResourceOnce.new"/>
 
 
   
@@ -57,18 +57,24 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
-
 <div class="section">
-  <h5>Function Macros</h5>
+  <h5>Type</h5>
   <div class="links">
+    <a href="class.FwIsoResourceOnce.html">FwIsoResourceOnce</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="method current" href="ctor.FwIsoResourceOnce.new.html">new</a>
   
   </div>
 </div>
-
 
     </nav>
     
@@ -77,8 +83,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Function Macro</h3>
-    <h1><a href="index.html">Hinoko</a><span class="sep"></span>FW_ISO_TX_CLASS</h1>
+    <h3>Constructor</h3>
+    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="class.FwIsoResourceOnce.html">FwIsoResourceOnce</a><span class="sep"></span>new</h1>
   </header>
 
   <section>
@@ -87,13 +93,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_tx.h#L19">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_once.h#L18">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <pre><code><div class="highlight"><pre><span></span><span class="cp">#define HINOKO_FW_ISO_TX_CLASS (</span>
-<span class="w">  </span><span class="n">klass</span><span class="w"></span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">HinokoFwIsoResourceOnce</span><span class="o">*</span><span class="w"></span>
+<span class="n">hinoko_fw_iso_resource_once_new</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
 </code></pre>
@@ -105,19 +112,17 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_once.c#L191">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Allocate and return an instance of <a href="class.FwIsoResourceOnce.html"><code>HinokoFwIsoResourceOnce</code></a>.</p>
       </div>
 
       <div class="docblock">
         <table>
           
-          
-          
-          
-          <tr><td>This function is not directly available to language bindings</td></tr>
           
           
           
@@ -128,39 +133,34 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     
-    <div class="parameters toggle-wrapper">
-      <h4 id="parameters">
-        Parameters
-        <a href="#parameters" class="anchor"></a>
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-        <table class="arguments">
-          
+        <table class="returns">
           <tr class="arg-name">
-            <td><code>klass</code></td>
-            <td><code>-</code></td>
+            <td>Returns:</td>
+            <td><a href="class.FwIsoResourceOnce.html"><code>HinokoFwIsoResourceOnce</code></a></td>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>A <a href="class.FwIsoResourceOnce.html"><code>HinokoFwIsoResourceOnce</code></a>.</p>
+<p>Sine:&nbsp;0.7.</p></td>
           </tr>
           
           
           
-          
-          
-          
-          
-          
-          
+          <tr><td>&nbsp;</td><td title="transfer: full">The caller of the function takes ownership of the data, and is responsible for freeing it.</td></tr>
           
           
         </table>
       </div>
     </div>
-    
-
     
   </section>
 </section>

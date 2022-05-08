@@ -57,23 +57,29 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.FwIsoResource.html">FwIsoResource</a>
+    <a href="iface.FwIsoResource.html">FwIsoResource</a>
   </div>
 </div>
 <div class="section">
   <h5>Virtual methods</h5>
   <div class="links">
   
+    <a class="method" href="vfunc.FwIsoResource.allocate_async.html">allocate_async</a>
+  
     <a class="method" href="vfunc.FwIsoResource.allocated.html">allocated</a>
   
+    <a class="method" href="vfunc.FwIsoResource.create_source.html">create_source</a>
+  
     <a class="method current" href="vfunc.FwIsoResource.deallocated.html">deallocated</a>
+  
+    <a class="method" href="vfunc.FwIsoResource.open.html">open</a>
   
   </div>
 </div>
@@ -86,7 +92,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <section id="main" class="content">
   <header>
     <h3>Virtual Method</h3>
-    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="class.FwIsoResource.html">FwIsoResource</a><span class="sep"></span>deallocated</h1>
+    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoResource.html">FwIsoResource</a><span class="sep"></span>deallocated</h1>
   </header>
 
   <section>
@@ -95,7 +101,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L75">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L56">[src]</a>
         
       </h4>
 
@@ -105,7 +111,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <span class="w">  </span><span class="n">HinokoFwIsoResource</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">bandwidth</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">GError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">GError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
 </code></pre>
@@ -117,13 +123,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L63">[src]</a>
-        
       </h4>
 
       <div class="docblock">
-        <p>When deallocation of isochronous resource finishes, the <code>HinokoFwIsoResourceClass::deallocated</code>
-handler is called to notify the result, channel, and&nbsp;bandwidth.</p>
+        No description available.
       </div>
 
       <div class="docblock">
@@ -153,7 +156,7 @@ handler is called to notify the result, channel, and&nbsp;bandwidth.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>The deallocated channel&nbsp;number.</p></td>
+            <td>No description available.</td>
           </tr>
           
           
@@ -171,7 +174,7 @@ handler is called to notify the result, channel, and&nbsp;bandwidth.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>The deallocated amount of&nbsp;bandwidth.</p></td>
+            <td>No description available.</td>
           </tr>
           
           
@@ -189,8 +192,7 @@ handler is called to notify the result, channel, and&nbsp;bandwidth.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>A <code>GError</code>. Error can be generated with domain of
-   #hinoko_fw_iso_resource_error_quark() and code of&nbsp;#HINOKO_FW_ISO_RESOURCE_ERROR_EVENT.</p></td>
+            <td>No description available.</td>
           </tr>
           
           

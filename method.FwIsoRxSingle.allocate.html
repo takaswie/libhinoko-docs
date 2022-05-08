@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -79,13 +79,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
     <a class="method" href="method.FwIsoRxSingle.register_packet.html">register_packet</a>
   
-    <a class="method" href="method.FwIsoRxSingle.release.html">release</a>
-  
     <a class="method" href="method.FwIsoRxSingle.start.html">start</a>
-  
-    <a class="method" href="method.FwIsoRxSingle.stop.html">stop</a>
-  
-    <a class="method" href="method.FwIsoRxSingle.unmap_buffer.html">unmap_buffer</a>
   
   </div>
 </div>
@@ -107,12 +101,12 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.h#L65">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.h#L37">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
 <span class="n">hinoko_fw_iso_rx_single_allocate</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoRxSingle</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"></span>
@@ -130,15 +124,25 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.c#L239">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Allocate an <span class="caps">IR</span> context to 1394 <span class="caps">OHCI</span> controller for packet-per-buffer mode. A local node of the
+node corresponding to the given path is used as the controller, thus any path is accepted as
+long as process has enough permission for the&nbsp;path.</p>
+<p>The header_size parameter has an effect for the content of header parameter in
+<a href="signal.FwIsoRxSingle.interrupted.html"><code>HinokoFwIsoRxSingle::interrupted</code></a>. When it&#8217;s greater than 8, header includes the series of two
+quadlets for isochronous packet header and timestamp per isochronous packet. When it&#8217;s greater
+than 12, header includes the part of isochronous packet data per&nbsp;packet.</p>
       </div>
 
       <div class="docblock">
         <table>
           
+          
+          <tr><td>Available since:</td><td>0.7.</td></tr>
           
           
           
@@ -166,7 +170,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>A path to any Linux FireWire character&nbsp;device.</p></td>
           </tr>
           
           
@@ -184,7 +188,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>An isochronous channel to listen, up to&nbsp;63.</p></td>
           </tr>
           
           
@@ -202,7 +206,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>The number of bytes for header of <span class="caps">IR</span> context, greater than 4 at least to include
+     isochronous packet header in header parameter of <a href="signal.FwIsoRxSingle.interrupted.html"><code>HinokoFwIsoRxSingle::interrupted</code></a>.</p></td>
           </tr>
           
           
@@ -229,6 +234,32 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
     
 
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="returns">
+          <tr class="arg-name">
+            <td>Returns:</td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p><span class="caps">TRUE</span> if the overall operation finishes successfully, otherwise <span class="caps">FALSE</span>.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+        </table>
+      </div>
+    </div>
     
 
   </section>

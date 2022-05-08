@@ -57,14 +57,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="class.FwIsoCtx.html">FwIsoCtx</a>
+    <a href="iface.FwIsoCtx.html">FwIsoCtx</a>
   </div>
 </div>
 <div class="section">
@@ -84,7 +84,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <section id="main" class="content">
   <header>
     <h3>Signal</h3>
-    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="class.FwIsoCtx.html">FwIsoCtx</a>::stopped</h1>
+    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoCtx.html">FwIsoCtx</a>::stopped</h1>
   </header>
 
   <section>
@@ -98,7 +98,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
 <span class="n">stopped</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoCtx</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">GError</span><span class="o">*</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">GError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
@@ -111,16 +111,20 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.c#L40">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Emitted when isochronous context is&nbsp;stopped.</p>
       </div>
 
       <div class="docblock">
         <table>
           <tr><td>Default handler:</td><td> <p>The default handler is called after the handlers added via <code>g_signal_connect()</code>.</p></td></tr>
           
+          
+          <tr><td colspan="2">The signal can be emitted directly</td></tr>
           
           
           
@@ -144,15 +148,15 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <table class="arguments">
           
           <tr class="arg-name">
-            <td><code>object</code></td>
+            <td><code>error</code></td>
             <td><a href="javascript:void(0)" data-link="struct.Error.html" data-namespace="GLib" class="external"><code>GError</code></a></td>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>A <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Error.html" class="external"><code>GError</code></a>.</p></td>
           </tr>
           
-          
+          <tr><td>&nbsp;</td><td>The argument can be <code>NULL</code>.</td></tr>
           
           
           

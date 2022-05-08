@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -69,6 +69,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
     <a href="#classes">Classes</a>
   
+  
+    <a href="#interfaces">Interfaces</a>
   
   
     <a href="#structs">Structs</a>
@@ -86,10 +88,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
   
   
-    <a href="#functions">Functions</a>
-  
-  
-    <a href="#function_macros">Function Macros</a>
   
   
   </div>
@@ -123,7 +121,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 
     <div class="meta info">
       <table>
-        <tr><td><em>Version</em></td><td>0.6.0</td></tr>
+        <tr><td><em>Version</em></td><td>0.7.0</td></tr>
         <tr><td><em>Authors</em></td><td>Takashi Sakamoto</td></tr>
         <tr><td><em>License</em></td><td>LGPL-2.1-or-later</td></tr>
         <tr><td><em>Website</em></td><td><a href="https://takaswie.github.io/libhinoko-docs/" class="external">https://takaswie.github.io/libhinoko-docs/</a></td></tr>
@@ -220,17 +218,12 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <tbody>
           
           <tr class="section-item">
-            <td><a title="FwIsoCtx" class="symbol" href="class.FwIsoCtx.html">FwIsoCtx</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FwIsoResource" class="symbol" href="class.FwIsoResource.html">FwIsoResource</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
             <td><a title="FwIsoResourceAuto" class="symbol" href="class.FwIsoResourceAuto.html">FwIsoResourceAuto</a></td>
+            
+          </tr>
+          
+          <tr class="section-item">
+            <td><a title="FwIsoResourceOnce" class="symbol" href="class.FwIsoResourceOnce.html">FwIsoResourceOnce</a></td>
             
           </tr>
           
@@ -255,6 +248,33 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
   </section>
   
+  
+  <section>
+    <div class="toggle-wrapper default-hide">
+      <h4 id="interfaces" class="section-header" style="display:flex;">
+        Interfaces
+        <a href="#interfaces" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table style="display:block;">
+          <tbody>
+          
+          <tr class="section-item">
+            <td><a title="FwIsoCtx" class="symbol" href="iface.FwIsoCtx.html">FwIsoCtx</a></td>
+            
+          </tr>
+          
+          <tr class="section-item">
+            <td><a title="FwIsoResource" class="symbol" href="iface.FwIsoResource.html">FwIsoResource</a></td>
+            
+          </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
   
   
   <section>
@@ -367,110 +387,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
   
   
-  <section>
-    <div class="toggle-wrapper default-hide">
-      <h4 id="functions" class="section-header" style="display:flex;">
-        Functions
-        <a href="#functions" class="anchor"></a>
-      </h4>
-
-      <div class="docblock">
-        <table style="display:block;">
-          <tbody>
-          
-          <tr class="section-item">
-            <td><a title="sigs_marshal_VOID__UINT_UINT_OBJECT" class="symbol" href="func.sigs_marshal_VOID__UINT_UINT_OBJECT.html">sigs_marshal_VOID__UINT_UINT_OBJECT</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="sigs_marshal_VOID__UINT_UINT_POINTER_UINT_UINT" class="symbol" href="func.sigs_marshal_VOID__UINT_UINT_POINTER_UINT_UINT.html">sigs_marshal_VOID__UINT_UINT_POINTER_UINT_UINT</a></td>
-            
-          </tr>
-          
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-  
-  
-  <section>
-    <div class="toggle-wrapper default-hide">
-      <h4 id="function_macros" class="section-header" style="display:flex;">
-        Function Macros
-        <a href="#function_macros" class="anchor"></a>
-      </h4>
-
-      <div class="docblock">
-        <table style="display:block;">
-          <tbody>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_CTX" class="symbol" href="func.FW_ISO_CTX.html">FW_ISO_CTX</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_CTX_CLASS" class="symbol" href="func.FW_ISO_CTX_CLASS.html">FW_ISO_CTX_CLASS</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RESOURCE" class="symbol" href="func.FW_ISO_RESOURCE.html">FW_ISO_RESOURCE</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RESOURCE_AUTO" class="symbol" href="func.FW_ISO_RESOURCE_AUTO.html">FW_ISO_RESOURCE_AUTO</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RESOURCE_AUTO_CLASS" class="symbol" href="func.FW_ISO_RESOURCE_AUTO_CLASS.html">FW_ISO_RESOURCE_AUTO_CLASS</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RESOURCE_CLASS" class="symbol" href="func.FW_ISO_RESOURCE_CLASS.html">FW_ISO_RESOURCE_CLASS</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RX_MULTIPLE" class="symbol" href="func.FW_ISO_RX_MULTIPLE.html">FW_ISO_RX_MULTIPLE</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RX_MULTIPLE_CLASS" class="symbol" href="func.FW_ISO_RX_MULTIPLE_CLASS.html">FW_ISO_RX_MULTIPLE_CLASS</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RX_SINGLE" class="symbol" href="func.FW_ISO_RX_SINGLE.html">FW_ISO_RX_SINGLE</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_RX_SINGLE_CLASS" class="symbol" href="func.FW_ISO_RX_SINGLE_CLASS.html">FW_ISO_RX_SINGLE_CLASS</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_TX" class="symbol" href="func.FW_ISO_TX.html">FW_ISO_TX</a></td>
-            
-          </tr>
-          
-          <tr class="section-item">
-            <td><a title="FW_ISO_TX_CLASS" class="symbol" href="func.FW_ISO_TX_CLASS.html">FW_ISO_TX_CLASS</a></td>
-            
-          </tr>
-          
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
   
   
 </section>

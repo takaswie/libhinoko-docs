@@ -24,8 +24,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta priority="og:title" content="Hinoko.FwIsoCtx.flush_completions"/>
-  <meta priority="og:description" content="Reference for Hinoko.FwIsoCtx.flush_completions"/>
+  <meta property="og:title" content="Hinoko.FwIsoCtx.flush_completions"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoCtx.flush_completions"/>
   <meta name="twitter:title" content="Hinoko.FwIsoCtx.flush_completions"/>
   <meta name="twitter:description" content="Reference for Hinoko.FwIsoCtx.flush_completions"/>
 
@@ -68,20 +68,22 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Virtual methods</h5>
   <div class="links">
   
-    <a class="method" href="method.FwIsoCtx.create_source.html">create_source</a>
+    <a class="method" href="vfunc.FwIsoCtx.create_source.html">create_source</a>
   
-    <a class="method current" href="method.FwIsoCtx.flush_completions.html">flush_completions</a>
+    <a class="method current" href="vfunc.FwIsoCtx.flush_completions.html">flush_completions</a>
   
-    <a class="method" href="method.FwIsoCtx.get_cycle_timer.html">get_cycle_timer</a>
+    <a class="method" href="vfunc.FwIsoCtx.get_cycle_timer.html">get_cycle_timer</a>
   
-    <a class="method" href="method.FwIsoCtx.release.html">release</a>
+    <a class="method" href="vfunc.FwIsoCtx.release.html">release</a>
   
-    <a class="method" href="method.FwIsoCtx.stop.html">stop</a>
+    <a class="method" href="vfunc.FwIsoCtx.stop.html">stop</a>
   
-    <a class="method" href="method.FwIsoCtx.unmap_buffer.html">unmap_buffer</a>
+    <a class="method" href="vfunc.FwIsoCtx.stopped.html">stopped</a>
+  
+    <a class="method" href="vfunc.FwIsoCtx.unmap_buffer.html">unmap_buffer</a>
   
   </div>
 </div>
@@ -93,23 +95,23 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
+    <h3>Virtual Method</h3>
     <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoCtx.html">FwIsoCtx</a><span class="sep"></span>flush_completions</h1>
   </header>
 
   <section>
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.h#L54">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.h#L29">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
-<span class="n">hinoko_fw_iso_ctx_flush_completions</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="n">flush_completions</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoCtx</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="w"></span>
 <span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
@@ -119,9 +121,9 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
         <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.c#L150">[src]</a>
         
@@ -138,9 +140,6 @@ process the content of isochronous packet without waiting for actual hardware&nb
           
           
           <tr><td>Available since:</td><td>0.7.</td></tr>
-          
-          
-          
           
           
         </table>

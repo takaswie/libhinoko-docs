@@ -24,8 +24,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta priority="og:title" content="Hinoko.FwIsoResource.create_source"/>
-  <meta priority="og:description" content="Reference for Hinoko.FwIsoResource.create_source"/>
+  <meta property="og:title" content="Hinoko.FwIsoResource.create_source"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoResource.create_source"/>
   <meta name="twitter:title" content="Hinoko.FwIsoResource.create_source"/>
   <meta name="twitter:description" content="Reference for Hinoko.FwIsoResource.create_source"/>
 
@@ -68,16 +68,18 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Virtual methods</h5>
   <div class="links">
   
-    <a class="method" href="method.FwIsoResource.allocate_async.html">allocate_async</a>
+    <a class="method" href="vfunc.FwIsoResource.allocate_async.html">allocate_async</a>
   
-    <a class="method" href="method.FwIsoResource.allocate_sync.html">allocate_sync</a>
+    <a class="method" href="vfunc.FwIsoResource.allocated.html">allocated</a>
   
-    <a class="method current" href="method.FwIsoResource.create_source.html">create_source</a>
+    <a class="method current" href="vfunc.FwIsoResource.create_source.html">create_source</a>
   
-    <a class="method" href="method.FwIsoResource.open.html">open</a>
+    <a class="method" href="vfunc.FwIsoResource.deallocated.html">deallocated</a>
+  
+    <a class="method" href="vfunc.FwIsoResource.open.html">open</a>
   
   </div>
 </div>
@@ -89,23 +91,23 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
+    <h3>Virtual Method</h3>
     <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoResource.html">FwIsoResource</a><span class="sep"></span>create_source</h1>
   </header>
 
   <section>
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L63">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L27">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
-<span class="n">hinoko_fw_iso_resource_create_source</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="n">create_source</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoResource</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">GSource</span><span class="o">**</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
@@ -116,9 +118,9 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
         <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.c#L109">[src]</a>
         
@@ -133,9 +135,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           
           <tr><td>Available since:</td><td>0.7.</td></tr>
-          
-          
-          
           
           
         </table>
@@ -169,7 +168,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           
           
-          <tr><td>&nbsp;</td><td title="transfer: full">The instance takes ownership of the data, and is responsible for freeing it.</td></tr>
+          <tr><td>&nbsp;</td><td title="transfer: full">The called function takes ownership of the data, and is responsible for freeing it.</td></tr>
           
           
           

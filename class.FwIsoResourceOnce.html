@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hinoko.FwIsoResourceAuto</title>
+  <title>Hinoko.FwIsoResourceOnce</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -24,10 +24,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta property="og:title" content="Hinoko.FwIsoResourceAuto"/>
-  <meta property="og:description" content="Reference for Hinoko.FwIsoResourceAuto"/>
-  <meta name="twitter:title" content="Hinoko.FwIsoResourceAuto"/>
-  <meta name="twitter:description" content="Reference for Hinoko.FwIsoResourceAuto"/>
+  <meta property="og:title" content="Hinoko.FwIsoResourceOnce"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoResourceOnce"/>
+  <meta name="twitter:title" content="Hinoko.FwIsoResourceOnce"/>
+  <meta name="twitter:description" content="Reference for Hinoko.FwIsoResourceOnce"/>
 
 
   
@@ -64,7 +64,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="class.FwIsoResourceAuto.html#description">FwIsoResourceAuto</a>
+    <a class="current" href="class.FwIsoResourceOnce.html#description">FwIsoResourceOnce</a>
   </div>
 </div>
 
@@ -73,7 +73,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   <h5>Constructors</h5>
   <div class="links">
   
-    <a class="ctor" href="ctor.FwIsoResourceAuto.new.html">new</a>
+    <a class="ctor" href="ctor.FwIsoResourceOnce.new.html">new</a>
   
   </div>
 </div>
@@ -86,27 +86,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   <h5>Instance methods</h5>
   <div class="links">
   
-    <a class="method" href="method.FwIsoResourceAuto.deallocate_async.html">deallocate_async</a>
+    <a class="method" href="method.FwIsoResourceOnce.deallocate_async.html">deallocate_async</a>
   
-    <a class="method" href="method.FwIsoResourceAuto.deallocate_sync.html">deallocate_sync</a>
-  
-  </div>
-</div>
-
-
-
-<div class="section">
-  <h5>Properties</h5>
-  <div class="links">
-  
-    <a class="property" href="property.FwIsoResourceAuto.bandwidth.html">bandwidth</a>
-  
-    <a class="property" href="property.FwIsoResourceAuto.channel.html">channel</a>
-  
-    <a class="property" href="property.FwIsoResourceAuto.is-allocated.html">is-allocated</a>
+    <a class="method" href="method.FwIsoResourceOnce.deallocate_sync.html">deallocate_sync</a>
   
   </div>
 </div>
+
+
 
 
 
@@ -124,7 +111,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <section id="main" class="content">
   <header>
     <h3>Class</h3>
-    <h1 aria-label="Name"><a href="index.html">Hinoko</a><span class="sep" role="presentation"></span>FwIsoResourceAuto</h1>
+    <h1 aria-label="Name"><a href="index.html">Hinoko</a><span class="sep" role="presentation"></span>FwIsoResourceOnce</h1>
   </header>
 
   <section>
@@ -134,19 +121,20 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
-          <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_auto.c#L4">[src]</a>
+          <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_once.c#L4">[src]</a>
           
         </h4>
 
-        <pre><code>class Hinoko.FwIsoResourceAuto : GObject.Object {
+        <pre><code>class Hinoko.FwIsoResourceOnce : GObject.Object {
   parent_instance: GObject
 }</pre></code>
 
         <div class="docblock">
-          <p>An object to maintain allocated isochronous resource.
-A <a href="class.FwIsoResourceAuto.html"><code>HinokoFwIsoResourceAuto</code></a>is an object to maintain isochronous resource during the lifetime of
-the object. The allocated isochronous resource is kept even if the generation of the bus
-updates. The maintenance of allocated isochronous resource is done by Linux FireWire&nbsp;subsystem.</p>
+          <p>An object to initiate requests and listen events of isochronous resource allocation/deallocation
+by one shot.
+The <a href="class.FwIsoResourceOnce.html"><code>HinokoFwIsoResourceOnce</code></a> is an object to initiate requests and listen events of isochronous
+resource allocation/deallocation by file descriptor owned internally. The allocated resource
+is left even if this object is destroyed, thus application is responsible for&nbsp;deallocation.</p>
         </div>
 
         <div class="docblock">
@@ -213,10 +201,10 @@ updates. The maintenance of allocated isochronous resource is done by Linux Fire
       <div class="docblock">
       
         <div class="">
-          <h6><a href="ctor.FwIsoResourceAuto.new.html">hinoko_fw_iso_resource_auto_new</a></h6>
+          <h6><a href="ctor.FwIsoResourceOnce.new.html">hinoko_fw_iso_resource_once_new</a></h6>
 
           <div class="docblock">
-            <p>Allocate and return an instance of <code>HinokoFwIsoResourceAuto</code>object.</p>
+            <p>Allocate and return an instance of <code>HinokoFwIsoResourceOnce</code>.</p>
           </div>
 
           
@@ -238,19 +226,20 @@ updates. The maintenance of allocated isochronous resource is done by Linux Fire
       <div class="docblock">
       
         <div class="">
-          <h6><a href="method.FwIsoResourceAuto.deallocate_async.html">hinoko_fw_iso_resource_auto_deallocate_async</a></h6>
+          <h6><a href="method.FwIsoResourceOnce.deallocate_async.html">hinoko_fw_iso_resource_once_deallocate_async</a></h6>
           <div class="docblock">
-            <p>Initiate deallocation of isochronous resource. When the deallocation is done,
-<code>HinokoFwIsoResource::deallocated</code> signal is emit to notify the result, channel, and&nbsp;bandwidth.</p>
+            <p>Initiate deallocation of isochronous resource without any wait. When the
+deallocation finishes, <code>HinokoFwIsoResource::deallocated</code> signal is emit to notify the result,
+channel, and&nbsp;bandwidth.</p>
           </div>
           <div class="docblock"><p>Available since: 0.7.</p></div>
         </div>
       
         <div class="">
-          <h6><a href="method.FwIsoResourceAuto.deallocate_sync.html">hinoko_fw_iso_resource_auto_deallocate_sync</a></h6>
+          <h6><a href="method.FwIsoResourceOnce.deallocate_sync.html">hinoko_fw_iso_resource_once_deallocate_sync</a></h6>
           <div class="docblock">
-            <p>Initiate deallocation of isochronous resource. When the deallocation is done,
-<code>HinokoFwIsoResource::deallocated</code> signal is emit to notify the result, channel, and&nbsp;bandwidth.</p>
+            <p>Initiate deallocation of isochronous resource and wait for <code>HinokoFwIsoResource::deallocated</code>
+signal.</p>
           </div>
           <div class="docblock"><p>Available since: 0.7.</p></div>
         </div>
@@ -314,40 +303,6 @@ resource management to Linux FireWire&nbsp;subsystem.</p>
         <a href="#properties" class="anchor"></a>
       </h4>
 
-      
-      <div class="docblock">
-      
-        <div class="">
-          <h6><a href="property.FwIsoResourceAuto.bandwidth.html">Hinoko.FwIsoResourceAuto:bandwidth</a></h6>
-
-          <div class="docblock">
-            No description available.
-          </div>
-
-          
-        </div>
-      
-        <div class="">
-          <h6><a href="property.FwIsoResourceAuto.channel.html">Hinoko.FwIsoResourceAuto:channel</a></h6>
-
-          <div class="docblock">
-            No description available.
-          </div>
-
-          
-        </div>
-      
-        <div class="">
-          <h6><a href="property.FwIsoResourceAuto.is-allocated.html">Hinoko.FwIsoResourceAuto:is-allocated</a></h6>
-
-          <div class="docblock">
-            No description available.
-          </div>
-
-          
-        </div>
-      
-      </div>
       
 
       
@@ -428,7 +383,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       </h4>
 
       <div class="docblock">
-        <pre><code>struct HinokoFwIsoResourceAutoClass {
+        <pre><code>struct HinokoFwIsoResourceOnceClass {
   GObjectClass parent_class;
   
 }</code></pre>
@@ -488,8 +443,6 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
 
       
-<li class="toc-list-item"><a href="#properties"><span class="link-text">Properties</span></a></li>
-
 
       
 

@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -70,10 +70,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <div class="section">
   <h5>Methods</h5>
   <div class="links">
-  
-    <a class="method" href="method.FwIsoResourceAuto.allocate_async.html">allocate_async</a>
-  
-    <a class="method" href="method.FwIsoResourceAuto.allocate_sync.html">allocate_sync</a>
   
     <a class="method" href="method.FwIsoResourceAuto.deallocate_async.html">deallocate_async</a>
   
@@ -99,14 +95,15 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_auto.h#L66">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_auto.h#L26">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
 <span class="n">hinoko_fw_iso_resource_auto_deallocate_sync</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="n">HinokoFwIsoResourceAuto</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="w"></span>
+<span class="w">  </span><span class="n">HinokoFwIsoResourceAuto</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">timeout_ms</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
@@ -119,15 +116,20 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource_auto.c#L362">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Initiate deallocation of isochronous resource. When the deallocation is done,
+<a href="signal.FwIsoResource.deallocated.html"><code>HinokoFwIsoResource::deallocated</code></a> signal is emit to notify the result, channel, and&nbsp;bandwidth.</p>
       </div>
 
       <div class="docblock">
         <table>
           
+          
+          <tr><td>Available since:</td><td>0.7.</td></tr>
           
           
           
@@ -140,7 +142,74 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
 
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>timeout_ms</code></td>
+            <td><code>guint</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The timeout to wait for allocated event by milli second&nbsp;unit.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>error</code></td>
+            <td><code>GError **</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td>The return location for a <code>GError*</code>, or <code>NULL</code>.</td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="returns">
+          <tr class="arg-name">
+            <td>Returns:</td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p><span class="caps">TRUE</span> if the overall operation finished successfully, otherwise <span class="caps">FALSE</span>.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+        </table>
+      </div>
+    </div>
     
 
   </section>

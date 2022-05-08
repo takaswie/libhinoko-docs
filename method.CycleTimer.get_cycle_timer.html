@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -117,10 +117,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/cycle_timer.c#L89">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Get the value of cycle timer in 1394 <span class="caps">OHCI</span> controller. The first element of array expresses the
+value of sec field, up to 127. The second element of array expresses the value of cycle field,
+up to 7999. The third element of array expresses the value of offset field, up to&nbsp;3071.</p>
       </div>
 
       <div class="docblock">
@@ -149,18 +153,19 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           <tr class="arg-name">
             <td><code>cycle_timer</code></td>
-            <td><code>guint16*</code></td>
+            <td>An array of&nbsp;<code>guint16</code></td>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>The value of cycle timer register of
+     1394 <span class="caps">OHCI</span>, including three elements; second, cycle, and&nbsp;offset.</p></td>
           </tr>
+          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
           
           
           
           
-          
-          
+          <tr><td>&nbsp;</td><td>The array must have 3 elements.</td></tr>
           
           <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
           

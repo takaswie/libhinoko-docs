@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hinoko.FwIsoResource.create_source</title>
+  <title>Hinoko.FwIsoResource.open</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -24,10 +24,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta priority="og:title" content="Hinoko.FwIsoResource.create_source"/>
-  <meta priority="og:description" content="Reference for Hinoko.FwIsoResource.create_source"/>
-  <meta name="twitter:title" content="Hinoko.FwIsoResource.create_source"/>
-  <meta name="twitter:description" content="Reference for Hinoko.FwIsoResource.create_source"/>
+  <meta property="og:title" content="Hinoko.FwIsoResource.open"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoResource.open"/>
+  <meta name="twitter:title" content="Hinoko.FwIsoResource.open"/>
+  <meta name="twitter:description" content="Reference for Hinoko.FwIsoResource.open"/>
 
 
   
@@ -68,16 +68,18 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Virtual methods</h5>
   <div class="links">
   
-    <a class="method" href="method.FwIsoResource.allocate_async.html">allocate_async</a>
+    <a class="method" href="vfunc.FwIsoResource.allocate_async.html">allocate_async</a>
   
-    <a class="method" href="method.FwIsoResource.allocate_sync.html">allocate_sync</a>
+    <a class="method" href="vfunc.FwIsoResource.allocated.html">allocated</a>
   
-    <a class="method current" href="method.FwIsoResource.create_source.html">create_source</a>
+    <a class="method" href="vfunc.FwIsoResource.create_source.html">create_source</a>
   
-    <a class="method" href="method.FwIsoResource.open.html">open</a>
+    <a class="method" href="vfunc.FwIsoResource.deallocated.html">deallocated</a>
+  
+    <a class="method current" href="vfunc.FwIsoResource.open.html">open</a>
   
   </div>
 </div>
@@ -89,25 +91,26 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
-    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoResource.html">FwIsoResource</a><span class="sep"></span>create_source</h1>
+    <h3>Virtual Method</h3>
+    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoResource.html">FwIsoResource</a><span class="sep"></span>open</h1>
   </header>
 
   <section>
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L63">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.h#L20">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
-<span class="n">hinoko_fw_iso_resource_create_source</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="n">open</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoResource</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">GSource</span><span class="o">**</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">open_flag</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
@@ -116,16 +119,17 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.c#L109">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_resource.c#L83">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>Create <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Source.html" class="external"><code>GSource</code></a> for <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a> to dispatch events for isochronous&nbsp;resource.</p>
+        <p>Open Linux FireWire character device to delegate any request for isochronous
+resource management to Linux FireWire&nbsp;subsystem.</p>
       </div>
 
       <div class="docblock">
@@ -133,9 +137,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           
           <tr><td>Available since:</td><td>0.7.</td></tr>
-          
-          
-          
           
           
         </table>
@@ -155,21 +156,39 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <table class="arguments">
           
           <tr class="arg-name">
-            <td><code>source</code></td>
-            <td><a href="javascript:void(0)" data-link="struct.Source.html" data-namespace="GLib" class="external"><code>GSource</code></a></td>
+            <td><code>path</code></td>
+            <td><code>const gchar*</code></td>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>A <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Source.html" class="external"><code>GSource</code></a></p></td>
+            <td><p>A path of any Linux FireWire character&nbsp;device.</p></td>
           </tr>
-          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
           
           
           
           
           
           
-          <tr><td>&nbsp;</td><td title="transfer: full">The instance takes ownership of the data, and is responsible for freeing it.</td></tr>
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          <tr><td>&nbsp;</td><td>The value is a NUL terminated UTF-8 string.</td></tr>
+          
+          <tr class="arg-name">
+            <td><code>open_flag</code></td>
+            <td><code>gint</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The flag of open(2) system call. O_RDONLY is forced to fulfil&nbsp;internally.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
           
           
           

@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -79,13 +79,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
     <a class="method current" href="method.FwIsoRxSingle.register_packet.html">register_packet</a>
   
-    <a class="method" href="method.FwIsoRxSingle.release.html">release</a>
-  
     <a class="method" href="method.FwIsoRxSingle.start.html">start</a>
-  
-    <a class="method" href="method.FwIsoRxSingle.stop.html">stop</a>
-  
-    <a class="method" href="method.FwIsoRxSingle.unmap_buffer.html">unmap_buffer</a>
   
   </div>
 </div>
@@ -107,12 +101,12 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.h#L77">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.h#L44">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
 <span class="n">hinoko_fw_iso_rx_single_register_packet</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoRxSingle</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">schedule_interrupt</span><span class="p">,</span><span class="w"></span>
@@ -128,15 +122,21 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_rx_single.c#L310">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Register chunk of buffer to process packet for future isochronous cycle. The caller can schedule
+hardware interrupt to generate interrupt event. In detail, please refer to documentation about
+<a href="signal.FwIsoRxSingle.interrupted.html"><code>HinokoFwIsoRxSingle::interrupted</code></a>&nbsp;signal.</p>
       </div>
 
       <div class="docblock">
         <table>
           
+          
+          <tr><td>Available since:</td><td>0.7.</td></tr>
           
           
           
@@ -164,7 +164,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>Whether to schedule hardware interrupt at isochronous cycle for the&nbsp;packet.</p></td>
           </tr>
           
           
@@ -191,6 +191,32 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
     
 
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="returns">
+          <tr class="arg-name">
+            <td>Returns:</td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p><span class="caps">TRUE</span> if the overall operation finishes successfully, otherwise <span class="caps">FALSE</span>.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+        </table>
+      </div>
+    </div>
     
 
   </section>

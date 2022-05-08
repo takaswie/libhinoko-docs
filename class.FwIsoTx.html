@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -92,13 +92,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
     <a class="method" href="method.FwIsoTx.register_packet.html">register_packet</a>
   
-    <a class="method" href="method.FwIsoTx.release.html">release</a>
-  
     <a class="method" href="method.FwIsoTx.start.html">start</a>
-  
-    <a class="method" href="method.FwIsoTx.stop.html">stop</a>
-  
-    <a class="method" href="method.FwIsoTx.unmap_buffer.html">unmap_buffer</a>
   
   </div>
 </div>
@@ -149,15 +143,19 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_tx.c#L4">[src]</a>
+          
         </h4>
 
-        <pre><code>class Hinoko.FwIsoTx : Hinoko.FwIsoCtx {
-  parent_instance: HinokoFwIsoCtx,
-  priv: HinokoFwIsoTxPrivate*
+        <pre><code>class Hinoko.FwIsoTx : GObject.Object {
+  parent_instance: GObject
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>An object to transmit isochronous packet for single channel.
+A <a href="class.FwIsoTx.html"><code>HinokoFwIsoTx</code></a> transmits isochronous packets for single channel by <span class="caps">IT</span> context in 1394 <span class="caps">OHCI</span>.
+The content of packet is split to two parts; context header and context payload in a manner of
+Linux FireWire&nbsp;subsystem.</p>
         </div>
 
         <div class="docblock">
@@ -185,10 +183,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <ul>
         
           
-          <li class="class"><a href="class.FwIsoCtx.html" title="FwIsoCtx">HinokoFwIsoCtx</a></li>
-          
-        
-          
           <li class="class"><a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a></li>
           
         
@@ -199,6 +193,23 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 
     
 
+    
+    <div class="toggle-wrapper implements">
+      <h4 id="implements">
+        Implements
+        <a href="#implements" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <ul>
+        
+          
+          <li class="interface"><a href="iface.FwIsoCtx.html" title="FwIsoCtx">HinokoFwIsoCtx</a></li>
+          
+        
+        </ul>
+      </div>
+    </div>
     
 
     
@@ -214,7 +225,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="ctor.FwIsoTx.new.html">hinoko_fw_iso_tx_new</a></h6>
 
           <div class="docblock">
-            No description available.
+            <p>Instantiate <code>HinokoFwIsoTx</code> object and return the&nbsp;instance.</p>
           </div>
 
           
@@ -238,84 +249,42 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.FwIsoTx.allocate.html">hinoko_fw_iso_tx_allocate</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Allocate an <span class="caps">IT</span> context to 1394 <span class="caps">OHCI</span> controller. A local node of the node corresponding to the
+given path is used as the controller, thus any path is accepted as long as process has enough
+permission for the&nbsp;path.</p>
           </div>
-          
+          <div class="docblock"><p>Available since: 0.7.</p></div>
         </div>
       
         <div class="">
           <h6><a href="method.FwIsoTx.map_buffer.html">hinoko_fw_iso_tx_map_buffer</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Map intermediate buffer to share payload of <span class="caps">IT</span> context with 1394 <span class="caps">OHCI</span>&nbsp;controller.</p>
           </div>
-          
+          <div class="docblock"><p>Available since: 0.7.</p></div>
         </div>
       
         <div class="">
           <h6><a href="method.FwIsoTx.register_packet.html">hinoko_fw_iso_tx_register_packet</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Register packet data with header and payload for <span class="caps">IT</span> context. The content of given header and
+payload is appended into data field of isochronous packet to be sent. The caller can schedule
+hardware interrupt to generate interrupt event. In detail, please refer to documentation about
+<code>HinokoFwIsoTx::interrupted</code>.</p>
           </div>
-          
-        </div>
-      
-        <div class="">
-          <h6><a href="method.FwIsoTx.release.html">hinoko_fw_iso_tx_release</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          
+          <div class="docblock"><p>Available since: 0.7.</p></div>
         </div>
       
         <div class="">
           <h6><a href="method.FwIsoTx.start.html">hinoko_fw_iso_tx_start</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Start <span class="caps">IT</span>&nbsp;context.</p>
           </div>
-          
-        </div>
-      
-        <div class="">
-          <h6><a href="method.FwIsoTx.stop.html">hinoko_fw_iso_tx_stop</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          
-        </div>
-      
-        <div class="">
-          <h6><a href="method.FwIsoTx.unmap_buffer.html">hinoko_fw_iso_tx_unmap_buffer</a></h6>
-          <div class="docblock">
-            No description available.
-          </div>
-          
+          <div class="docblock"><p>Available since: 0.7.</p></div>
         </div>
       
       </div>
 
-      
-        
-        <div class="toggle-wrapper default-hide ancestor-methods">
-          <h5 style="display:block;">Methods inherited from <a href="class.FwIsoCtx.html">HinokoFwIsoCtx</a> (3)</h5><div class="docblock">
-          
-            <h6><a href="method.FwIsoCtx.create_source.html">hinoko_fw_iso_ctx_create_source</a></h6><div class="docblock">
-              No description available.
-            </div>
-            
-          
-            <h6><a href="method.FwIsoCtx.flush_completions.html">hinoko_fw_iso_ctx_flush_completions</a></h6><div class="docblock">
-              No description available.
-            </div>
-            
-          
-            <h6><a href="method.FwIsoCtx.get_cycle_timer.html">hinoko_fw_iso_ctx_get_cycle_timer</a></h6><div class="docblock">
-              No description available.
-            </div>
-            
-          
-          </div>
-        </div>
-        
       
         
         <div class="toggle-wrapper default-hide ancestor-methods"><h5 style="display:block;">Methods inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (43)</h5>
@@ -331,6 +300,47 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
       
 
       
+        
+        <div class="toggle-wrapper default-hide ancestor-methods">
+          <h5 style="display:block;">Methods inherited from <a href="iface.FwIsoCtx.html">HinokoFwIsoCtx</a> (6)</h5><div class="docblock">
+          
+            <h6><a href="method.FwIsoCtx.create_source.html">hinoko_fw_iso_ctx_create_source</a></h6><div class="docblock">
+              <p>Create <code>GSource</code> for <code>GMainContext</code> to dispatch events for isochronous&nbsp;context.</p>
+            </div>
+            <div class="docblock"><p>Available since: 0.7.</p></div>
+          
+            <h6><a href="method.FwIsoCtx.flush_completions.html">hinoko_fw_iso_ctx_flush_completions</a></h6><div class="docblock">
+              <p>Flush isochronous context until recent isochronous cycle. The call of function forces the
+context to queue any type of interrupt event for the recent isochronous cycle. Application can
+process the content of isochronous packet without waiting for actual hardware&nbsp;interrupt.</p>
+            </div>
+            <div class="docblock"><p>Available since: 0.7.</p></div>
+          
+            <h6><a href="method.FwIsoCtx.get_cycle_timer.html">hinoko_fw_iso_ctx_get_cycle_timer</a></h6><div class="docblock">
+              <p>Retrieve the value of cycle timer register. This method call is available
+once any isochronous context is&nbsp;created.</p>
+            </div>
+            <div class="docblock"><p>Available since: 0.7.</p></div>
+          
+            <h6><a href="method.FwIsoCtx.release.html">hinoko_fw_iso_ctx_release</a></h6><div class="docblock">
+              <p>Release the contest from 1394 <span class="caps">OHCI</span>&nbsp;controller.</p>
+            </div>
+            <div class="docblock"><p>Available since: 0.7.</p></div>
+          
+            <h6><a href="method.FwIsoCtx.stop.html">hinoko_fw_iso_ctx_stop</a></h6><div class="docblock">
+              <p>Stop isochronous&nbsp;context.</p>
+            </div>
+            <div class="docblock"><p>Available since: 0.7.</p></div>
+          
+            <h6><a href="method.FwIsoCtx.unmap_buffer.html">hinoko_fw_iso_ctx_unmap_buffer</a></h6><div class="docblock">
+              <p>Unmap intermediate buffer shared with 1394 <span class="caps">OHCI</span> controller for the&nbsp;context.</p>
+            </div>
+            <div class="docblock"><p>Available since: 0.7.</p></div>
+          
+          </div>
+        </div>
+        
+      
     </div>
     
 
@@ -345,8 +355,12 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 
       
         
+      
+
+      
+        
         <div class="toggle-wrapper default-hide ancestor-properties">
-          <h5 style="display:block;">Properties inherited from <a href="class.FwIsoCtx.html">HinokoFwIsoCtx</a> (3)</h5><div class="docblock">
+          <h5 style="display:block;">Properties inherited from <a href="iface.FwIsoCtx.html">HinokoFwIsoCtx</a> (2)</h5><div class="docblock">
           
             <h6><a href="property.FwIsoCtx.bytes-per-chunk.html">Hinoko.FwIsoCtx:bytes-per-chunk</a></h6><div class="docblock">
               No description available.
@@ -358,18 +372,9 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
             </div>
             
           
-            <h6><a href="property.FwIsoCtx.registered-chunk-count.html">Hinoko.FwIsoCtx:registered-chunk-count</a></h6><div class="docblock">
-              No description available.
-            </div>
-            
-          
           </div>
         </div>
         
-      
-        
-      
-
       
 
     </div>
@@ -388,7 +393,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="signal.FwIsoTx.interrupted.html">Hinoko.FwIsoTx::interrupted</a></h6>
           <div class="docblock">
-            No description available.
+            <p>Emitted when Linux FireWire subsystem generates interrupt event. There are three cases
+for Linux FireWire subsystem to generate the&nbsp;event:</p>
           </div>
           
         </div>
@@ -396,19 +402,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
       </div>
       
 
-      
-        
-        <div class="toggle-wrapper default-hide ancestor-signals">
-          <h5 style="display:block;">Signals inherited from <a href="class.FwIsoCtx.html">HinokoFwIsoCtx</a> (1)</h5><div class="docblock">
-          
-            <h6><a href="signal.FwIsoCtx.stopped.html">Hinoko.FwIsoCtx::stopped</a></h6><div class="docblock">
-              No description available.
-            </div>
-            
-          
-          </div>
-        </div>
-        
       
         
         <div class="toggle-wrapper default-hide ancestor-signals"><h5 style="display:block;">Signals inherited from <a class="external" href="javascript:void(0)" data-link="class.Object.html" data-namespace="GObject">GObject</a> (1)</h5>
@@ -426,6 +419,19 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
 
       
+        
+        <div class="toggle-wrapper default-hide ancestor-signals">
+          <h5 style="display:block;">Signals inherited from <a href="iface.FwIsoCtx.html">HinokoFwIsoCtx</a> (1)</h5><div class="docblock">
+          
+            <h6><a href="signal.FwIsoCtx.stopped.html">Hinoko.FwIsoCtx::stopped</a></h6><div class="docblock">
+              <p>Emitted when isochronous context is&nbsp;stopped.</p>
+            </div>
+            
+          
+          </div>
+        </div>
+        
+      
 
     </div>
     
@@ -439,7 +445,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
 
       <div class="docblock">
         <pre><code>struct HinokoFwIsoTxClass {
-  HinokoFwIsoCtxClass parent_class;
+  GObjectClass parent_class;
   void (* interrupted) (
     HinokoFwIsoTx* self,
     guint sec,
@@ -460,7 +466,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         
         <tr>
           <td style="vertical-align:top"><code>parent_class</code></td>
-          <td style="vertical-align:top"><pre><code>HinokoFwIsoCtxClass</code></pre></td>
+          <td style="vertical-align:top"><pre><code>GObjectClass</code></pre></td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -502,7 +508,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-interrupted"><a href="vfunc.FwIsoTx.interrupted.html">Hinoko.FwIsoTxClass.interrupted</a></h6>
 
         <div class="docblock">
-          <p>In detail, please refer to documentation about <code>HinokoFwIsoTx::interrupted</code>.</p>
+          <p>Class closure for the <code>HinokoFwIsoTx::interrupted</code> signal.</p>
         </div>
 
           
@@ -529,6 +535,8 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
       
       <li class="toc-list-item"><a href="#ancestors"><span class="link-text">Ancestors</span></a></li>
       
+      
+      <li class="toc-list-item"><a href="#implements"><span class="link-text">Implements</span></a></li>
       
       
 <li class="toc-list-item"><a href="#constructors"><span class="link-text">Constructors</span></a></li>

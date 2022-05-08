@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.6.0</p>
+        <p>Library Version: 0.7.0</p>
         
       </div>
       
@@ -117,10 +117,12 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/cycle_timer.c#L54">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Get the <span class="caps">ID</span> of clock for&nbsp;timestamp.</p>
       </div>
 
       <div class="docblock">
@@ -153,8 +155,11 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td>No description available.</td>
+            <td><p>The numerical <span class="caps">ID</span> of clock source for the reference timestamp. One of
+      CLOCK_REALTIME(0), CLOCK_MONOTONIC(1), and CLOCK_MONOTONIC_RAW(4) is available in
+      <span class="caps">UAPI</span> of Linux&nbsp;kernel.</p></td>
           </tr>
+          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
           
           
           
@@ -162,7 +167,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           
           
-          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
           
           
           

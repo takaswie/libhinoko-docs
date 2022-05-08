@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hinoko.FwIsoCtx.stopped</title>
+  <title>Hinoko.FwIsoCtx.release</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -24,10 +24,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta property="og:title" content="Hinoko.FwIsoCtx.stopped"/>
-  <meta property="og:description" content="Reference for Hinoko.FwIsoCtx.stopped"/>
-  <meta name="twitter:title" content="Hinoko.FwIsoCtx.stopped"/>
-  <meta name="twitter:description" content="Reference for Hinoko.FwIsoCtx.stopped"/>
+  <meta property="og:title" content="Hinoko.FwIsoCtx.release"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoCtx.release"/>
+  <meta name="twitter:title" content="Hinoko.FwIsoCtx.release"/>
+  <meta name="twitter:description" content="Reference for Hinoko.FwIsoCtx.release"/>
 
 
   
@@ -77,11 +77,11 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
     <a class="method" href="vfunc.FwIsoCtx.get_cycle_timer.html">get_cycle_timer</a>
   
-    <a class="method" href="vfunc.FwIsoCtx.release.html">release</a>
+    <a class="method current" href="vfunc.FwIsoCtx.release.html">release</a>
   
     <a class="method" href="vfunc.FwIsoCtx.stop.html">stop</a>
   
-    <a class="method current" href="vfunc.FwIsoCtx.stopped.html">stopped</a>
+    <a class="method" href="vfunc.FwIsoCtx.stopped.html">stopped</a>
   
     <a class="method" href="vfunc.FwIsoCtx.unmap_buffer.html">unmap_buffer</a>
   
@@ -96,7 +96,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <section id="main" class="content">
   <header>
     <h3>Virtual Method</h3>
-    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoCtx.html">FwIsoCtx</a><span class="sep"></span>stopped</h1>
+    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoCtx.html">FwIsoCtx</a><span class="sep"></span>release</h1>
   </header>
 
   <section>
@@ -105,15 +105,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.h#L40">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.h#L24">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
-<span class="n">stopped</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="n">HinokoFwIsoCtx</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">GError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
+<span class="n">release</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">HinokoFwIsoCtx</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
 </code></pre>
@@ -125,15 +124,19 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.c#L134">[src]</a>
+        
       </h4>
 
       <div class="docblock">
-        No description available.
+        <p>Release the contest from 1394 <span class="caps">OHCI</span>&nbsp;controller.</p>
       </div>
 
       <div class="docblock">
         <table>
           
+          
+          <tr><td>Available since:</td><td>0.7.</td></tr>
           
           
         </table>
@@ -142,38 +145,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
       
     </div>
 
-    
-    <div class="parameters toggle-wrapper">
-      <h4 id="parameters">
-        Parameters
-        <a href="#parameters" class="anchor"></a>
-      </h4>
-
-      <div class="docblock">
-        <table class="arguments">
-          
-          <tr class="arg-name">
-            <td><code>error</code></td>
-            <td><a href="javascript:void(0)" data-link="struct.Error.html" data-namespace="GLib" class="external"><code>GError</code></a></td>
-          </tr>
-          <tr class="arg-description">
-            <td>&nbsp;</td>
-            <td>No description available.</td>
-          </tr>
-          
-          
-          
-          
-          
-          
-          
-          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
-          
-          
-          
-        </table>
-      </div>
-    </div>
     
 
     

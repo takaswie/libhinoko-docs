@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hinoko.FwIsoCtx.create_source</title>
+  <title>Hinoko.FwIsoCtx.get_cycle_timer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -24,10 +24,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta priority="og:title" content="Hinoko.FwIsoCtx.create_source"/>
-  <meta priority="og:description" content="Reference for Hinoko.FwIsoCtx.create_source"/>
-  <meta name="twitter:title" content="Hinoko.FwIsoCtx.create_source"/>
-  <meta name="twitter:description" content="Reference for Hinoko.FwIsoCtx.create_source"/>
+  <meta property="og:title" content="Hinoko.FwIsoCtx.get_cycle_timer"/>
+  <meta property="og:description" content="Reference for Hinoko.FwIsoCtx.get_cycle_timer"/>
+  <meta name="twitter:title" content="Hinoko.FwIsoCtx.get_cycle_timer"/>
+  <meta name="twitter:description" content="Reference for Hinoko.FwIsoCtx.get_cycle_timer"/>
 
 
   
@@ -68,20 +68,22 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Virtual methods</h5>
   <div class="links">
   
-    <a class="method current" href="method.FwIsoCtx.create_source.html">create_source</a>
+    <a class="method" href="vfunc.FwIsoCtx.create_source.html">create_source</a>
   
-    <a class="method" href="method.FwIsoCtx.flush_completions.html">flush_completions</a>
+    <a class="method" href="vfunc.FwIsoCtx.flush_completions.html">flush_completions</a>
   
-    <a class="method" href="method.FwIsoCtx.get_cycle_timer.html">get_cycle_timer</a>
+    <a class="method current" href="vfunc.FwIsoCtx.get_cycle_timer.html">get_cycle_timer</a>
   
-    <a class="method" href="method.FwIsoCtx.release.html">release</a>
+    <a class="method" href="vfunc.FwIsoCtx.release.html">release</a>
   
-    <a class="method" href="method.FwIsoCtx.stop.html">stop</a>
+    <a class="method" href="vfunc.FwIsoCtx.stop.html">stop</a>
   
-    <a class="method" href="method.FwIsoCtx.unmap_buffer.html">unmap_buffer</a>
+    <a class="method" href="vfunc.FwIsoCtx.stopped.html">stopped</a>
+  
+    <a class="method" href="vfunc.FwIsoCtx.unmap_buffer.html">unmap_buffer</a>
   
   </div>
 </div>
@@ -93,25 +95,26 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
-    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoCtx.html">FwIsoCtx</a><span class="sep"></span>create_source</h1>
+    <h3>Virtual Method</h3>
+    <h1><a href="index.html">Hinoko</a><span class="sep"></span><a href="iface.FwIsoCtx.html">FwIsoCtx</a><span class="sep"></span>get_cycle_timer</h1>
   </header>
 
   <section>
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.h#L52">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.h#L26">[src]</a>
         
       </h4>
 
       <div class="docblock c-decl">
         <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span><span class="w"></span>
-<span class="n">hinoko_fw_iso_ctx_create_source</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="n">get_cycle_timer</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="n">HinokoFwIsoCtx</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">GSource</span><span class="o">**</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">gint</span><span class="w"> </span><span class="n">clock_id</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">HinokoCycleTimer</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">cycle_timer</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </pre></div>
@@ -120,16 +123,17 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.c#L81">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/takaswie/libhinoko/blob/main/src/fw_iso_ctx.c#L56">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>Create <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Source.html" class="external"><code>GSource</code></a> for <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.MainContext.html" class="external"><code>GMainContext</code></a> to dispatch events for isochronous&nbsp;context.</p>
+        <p>Retrieve the value of cycle timer register. This method call is available
+once any isochronous context is&nbsp;created.</p>
       </div>
 
       <div class="docblock">
@@ -137,9 +141,6 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           
           
           <tr><td>Available since:</td><td>0.7.</td></tr>
-          
-          
-          
           
           
         </table>
@@ -159,21 +160,40 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <table class="arguments">
           
           <tr class="arg-name">
-            <td><code>source</code></td>
-            <td><a href="javascript:void(0)" data-link="struct.Source.html" data-namespace="GLib" class="external"><code>GSource</code></a></td>
+            <td><code>clock_id</code></td>
+            <td><code>gint</code></td>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>A <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Source.html" class="external"><code>GSource</code></a>.</p></td>
+            <td><p>The numeric <span class="caps">ID</span> of clock source for the reference timestamp. One CLOCK_REALTIME(0),
+      CLOCK_MONOTONIC(1), and CLOCK_MONOTONIC_RAW(2) is available in <span class="caps">UAPI</span> of Linux&nbsp;kernel.</p></td>
           </tr>
-          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
           
           
           
           
           
           
-          <tr><td>&nbsp;</td><td title="transfer: full">The instance takes ownership of the data, and is responsible for freeing it.</td></tr>
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>cycle_timer</code></td>
+            <td><a href="struct.CycleTimer.html"><code>HinokoCycleTimer</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <a href="struct.CycleTimer.html"><code>HinokoCycleTimer</code></a> to store data of cycle&nbsp;timer.</p></td>
+          </tr>
+          <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: full">The called function takes ownership of the data, and is responsible for freeing it.</td></tr>
           
           
           
