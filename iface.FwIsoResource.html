@@ -57,7 +57,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h3><a href="index.html">Hinoko</a></h3>
         <p>API Version: 0.0</p>
         
-        <p>Library Version: 0.7.0</p>
+        <p>Library Version: 0.7.1</p>
         
       </div>
       
@@ -369,7 +369,7 @@ resource management to Linux FireWire&nbsp;subsystem.</p>
   );
   gboolean (* allocate_async) (
     HinokoFwIsoResource* self,
-    guint8* channel_candidates,
+    const guint8* channel_candidates,
     gsize channel_candidates_count,
     guint bandwidth,
     GError** error
@@ -426,7 +426,7 @@ resource management to Linux FireWire&nbsp;subsystem.</p>
           <td style="vertical-align:top"><code>allocate_async</code></td>
           <td style="vertical-align:top"><pre><code>gboolean (* allocate_async) (
     HinokoFwIsoResource* self,
-    guint8* channel_candidates,
+    const guint8* channel_candidates,
     gsize channel_candidates_count,
     guint bandwidth,
     GError** error
@@ -507,7 +507,7 @@ emitted to notify the result, channel, and&nbsp;bandwidth.</p>
         <h6 id="vfunc-allocated"><a href="vfunc.FwIsoResource.allocated.html">Hinoko.FwIsoResource.allocated</a></h6>
 
         <div class="docblock">
-          No description available.
+          <p>Closure for the <code>HinokoFwIsoResource::allocated</code> signal.</p>
         </div>
 
         
@@ -527,7 +527,7 @@ emitted to notify the result, channel, and&nbsp;bandwidth.</p>
         <h6 id="vfunc-deallocated"><a href="vfunc.FwIsoResource.deallocated.html">Hinoko.FwIsoResource.deallocated</a></h6>
 
         <div class="docblock">
-          No description available.
+          <p>Closure for the <code>HinokoFwIsoResource::deallocated</code> signal.</p>
         </div>
 
         
